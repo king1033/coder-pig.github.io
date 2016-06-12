@@ -35,7 +35,7 @@
 <meta property="og:image" content="http://static.zybuluo.com/coder-pig/7i9sl0f156sq54wwqpxdasyu/1.png">
 <meta property="og:image" content="http://static.zybuluo.com/coder-pig/ukn3px7yvdtvfen0u4okciqw/3.png">
 <meta property="og:image" content="http://static.zybuluo.com/coder-pig/bes1ohwoxqdszhkxu0x87hhf/3.png">
-<meta property="og:updated_time" content="2016-06-12T05:06:53.865Z">
+<meta property="og:updated_time" content="2016-06-12T14:00:09.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git大法好——4.Github作为远程仓库的使用详解">
 <meta name="twitter:description" content="Git大法好——4.Github作为远程仓库的使用详解引言首先我们先来回顾一下之前的三节我们都学了些什么：第一节：Git的引入以及关于Git的一些概念，让我们对Git有了一个基本的认识；第二节：Git的本地操作指令详解，熟悉了一波Git本地操作的指令；第三节：Git的分支操作，包括分支的创建，切换，处理冲突，合并；假如学完前面三节，大家后面又自己撸了几次指令，相信应该就有信手拈来的感觉了！第一节中">
@@ -110,7 +110,7 @@
 		<a href="/about" title="Coder-pig" target="_blank" itemprop="author">Coder-pig</a>
 		
   <p class="article-time">
-    <time datetime="2016-06-12T05:06:52.654Z" itemprop="datePublished"> 发表于 2016-06-12</time>
+    <time datetime="2016-06-12T14:00:06.168Z" itemprop="datePublished"> 发表于 2016-06-12</time>
     
   </p>
 </header>
@@ -130,7 +130,7 @@
 <li><strong>Github</strong>：是最大的代码托管网站，大部分的开发者都喜欢使用这个，但是开源项<br>目不收费，而私有项目是要交”保护费”的，而且Github服务器毕竟在国外，国内访<br>问可能会有些缓慢！</li>
 <li><strong>GitCafe</strong>：同样私有仓库收保护费，开源仓库免费，但是相比起github有点坑，而且<br>是不时会挂掉，不是很推荐…</li>
 <li><strong>Git@OSC</strong>：开源中国社区的，仓库免费，不过协作功能还没有完全体现。</li>
-<li><strong>GitLab</strong>：开源的版本管理系统，可以安装Gitlab CE源码，自己搭服务器；也可以使<br>用GitLab EE企业版，GitLab可以配合着其他IM工作使用，比如我司用的瀑布IM，当有人<br>推送更新的时候收到推送信息等！</li>
+<li><strong>GitLab</strong>：开源的版本管理系统，可以安装Gitlab CE源码，自己搭服务器；也可以使<br>用GitLab EE企业版，GitLab可以配合着其他IM工具使用，当有人<br>推送更新的时候收到推送信息等！(我厂用的就是自己搭建的GitLab，IM用的<strong>瀑布IM</strong>)</li>
 <li><strong>coding.net</strong>：国内体验最接近Github的产品，有免费版和开发版，高级版，内容可<br>自行到官网查看。</li>
 </ul>
 </blockquote>
@@ -224,7 +224,7 @@
 </blockquote>
 <p>另外，再安利一个练习Git命令行很棒的一个开源项目：<a href="https://github.com/Gazler/githug" target="_blank" rel="external">githug</a><br>通过闯关的形式让你熟悉Git命令的使用，总共有55个关卡，不过只能够在linux<br>系统上玩，因为安装游戏的指令就是：<strong>gem install github</strong>，关于通关攻略<br>网上有很多，这里贴下之前在简书上看到的一个：<a href="http://www.jianshu.com/p/482b32716bbe" target="_blank" rel="external">「Githug」Git 游戏通关流程</a></p>
 <hr>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>本节给大家讲解了Github作为远程仓库的可能会遇到的问题，但还是记住：<br>远程仓库只是作为我们交换各自本地仓库的一个<strong>媒介</strong>罢了，我们可以换成其他<br>的仓库，换汤不换药，我们更应该关注的是本地仓库的操作以及多人协作时的工作流<br>程，下节我们通过简单的例子来阐述Git多人协作开发的流程，敬请期待！</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>本节给大家讲解了Github作为远程仓库的可能会遇到的问题，但还是记住：<br>远程仓库只是作为我们交换各自本地仓库的一个<strong>媒介</strong>罢了，我们可以换成其他<br>的仓库，换汤不换药，我们更应该关注的是本地仓库的操作以及多人协作时的工作流<br>程，下节我们再来研究下这个多人协作的工作流吧！</p>
 <blockquote>
 <p>——作者：<strong>coder-pig</strong>，本教程不收取任何费用，欢迎转载，转载请注明出处，尊重作者<br>劳动成果，请勿用于商业用途，侵权必究！</p>
 </blockquote>
@@ -263,11 +263,19 @@
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2016/06/12/Git大法好——1.Git的引入以及概念解析/" title="Git大法好——4.Github作为远程仓库的使用详解">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Git大法好——4.Github作为远程仓库的使用详解</span>
+</a>
+</div>
+
 
 <div class="next">
-<a href="/2016/06/12/Git大法好——3.Git分支本地操作详解/"  title="Git大法好——3.Git分支本地操作详解">
+<a href="/2016/06/12/Git大法好——3.Git分支本地操作详解/"  title="Git大法好——Git大法好——3.Git分支本地操作详解">
  <strong>下一篇：</strong><br/> 
- <span>Git大法好——3.Git分支本地操作详解
+ <span>Git大法好——Git大法好——3.Git分支本地操作详解
 </span>
 </a>
 </div>
@@ -381,7 +389,7 @@
 		
 		
 		
-		<a href="http://www.zhihu.com/people/https://www.zhihu.com/people/zhuang-pei-jie" target="_blank" class="icon-zhihu" title="知乎"></a>
+		<a href="http://www.zhihu.com/people/zhuang-pei-jie" target="_blank" class="icon-zhihu" title="知乎"></a>
 		
 		
 		

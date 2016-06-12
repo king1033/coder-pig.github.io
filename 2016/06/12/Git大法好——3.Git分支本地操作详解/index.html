@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Git大法好——3.Git分支本地操作详解 | CoderPig的小世界</title>
+    <title>Git大法好——Git大法好——3.Git分支本地操作详解 | CoderPig的小世界</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Coder-pig">
@@ -16,7 +16,7 @@
 
 如上">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git大法好——3.Git分支本地操作详解">
+<meta property="og:title" content="Git大法好——Git大法好——3.Git分支本地操作详解">
 <meta property="og:url" content="http://yoursite.com/2016/06/12/Git大法好——3.Git分支本地操作详解/index.html">
 <meta property="og:site_name" content="CoderPig的小世界">
 <meta property="og:description" content="Git大法好——3.Git分支本地操作详解引言在上一节中我们对Git的常用本地操作的命令进行详解，而本节要讲解的是Git的分支，在讲解之前补充两点概念性的东西：
@@ -53,9 +53,9 @@
 <meta property="og:image" content="http://static.zybuluo.com/coder-pig/tbfvmypm96xidcajjdszqbes/19.png">
 <meta property="og:image" content="http://static.zybuluo.com/coder-pig/4mpdxipez1y99atatdb7ks5k/20.png">
 <meta property="og:image" content="http://static.zybuluo.com/coder-pig/a8htps60oo5x6i8juo2ke3eu/21.png">
-<meta property="og:updated_time" content="2016-06-12T05:09:46.419Z">
+<meta property="og:updated_time" content="2016-06-12T13:48:30.282Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git大法好——3.Git分支本地操作详解">
+<meta name="twitter:title" content="Git大法好——Git大法好——3.Git分支本地操作详解">
 <meta name="twitter:description" content="Git大法好——3.Git分支本地操作详解引言在上一节中我们对Git的常用本地操作的命令进行详解，而本节要讲解的是Git的分支，在讲解之前补充两点概念性的东西：
 第一个：第一节中一个读者提出的疑问，Git和SVN在版本控制中存储方式版本信息的差异。答：Git关心文件的整体是否发生变化，而SVN则关心的是文件内容的具体差异！SVN每次记录的是有哪些文件进行了修改，以及修改了哪些行的哪些内容：
 
@@ -124,14 +124,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/12/Git大法好——3.Git分支本地操作详解/" title="Git大法好——3.Git分支本地操作详解" itemprop="url">Git大法好——3.Git分支本地操作详解</a>
+      <a href="/2016/06/12/Git大法好——3.Git分支本地操作详解/" title="Git大法好——Git大法好——3.Git分支本地操作详解" itemprop="url">Git大法好——Git大法好——3.Git分支本地操作详解</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Coder-pig" target="_blank" itemprop="author">Coder-pig</a>
 		
   <p class="article-time">
-    <time datetime="2016-06-12T05:06:06.122Z" itemprop="datePublished"> 发表于 2016-06-12</time>
+    <time datetime="2016-06-12T13:48:27.371Z" itemprop="datePublished"> 发表于 2016-06-12</time>
     
   </p>
 </header>
@@ -147,7 +147,7 @@
 		<h1 id="Git大法好——3-Git分支本地操作详解"><a href="#Git大法好——3-Git分支本地操作详解" class="headerlink" title="Git大法好——3.Git分支本地操作详解"></a>Git大法好——3.Git分支本地操作详解</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在上一节中我们对Git的常用本地操作的命令进行详解，而本节要讲解的是Git的分支，<br>在讲解之前补充两点概念性的东西：</p>
 <p><strong>第一个</strong>：<br>第一节中一个读者提出的疑问，<strong>Git和SVN在版本控制中存储方式版本信息的差异</strong>。<br>答：Git关心<strong>文件的整体</strong>是否发生变化，而SVN则关心的是文件内容的具体差异！<br>SVN每次记录的是有哪些文件进行了修改，以及修改了哪些行的哪些内容：</p>
 <p><img src="http://static.zybuluo.com/coder-pig/yai4vn9fylkwxa7hbmmdt24n/svn.png" alt=""></p>
-<p>如上图，比如版本2中记录的是文件A以及文件C的变化，而版本3中仅仅记录文件C<br>的变化这样，以此类推；而Git并不保存这些前后变化的差异数据，而是保存整个当前<br>的工作空间(暂存区)所有文件，又叫快照，有变化的文件保存，没变化的文件就不保存，<br>而是对上一次保存的快照作一个链接。</p>
+<p>如上图，比如版本2中记录的是文件A以及文件C的变化，而版本3中仅仅记录文件C<br>的变化这样，以此类推；而Git并不保存这些前后变化的差异数据，而是保存整个当前<br>的工作空间(暂存区)所有文件，又叫<strong>快照</strong>，有变化的文件保存，没变化的文件就不保存，<br>而是对上一次保存的快照作一个链接。</p>
 <p><img src="http://static.zybuluo.com/coder-pig/e6s6m5qdgpl9yhe76t92d3nz/git.png" alt=""></p>
 <p>如上图，每一次保存的都是所有文件，改变的保存，没改变的链接指向上一次提交的文件！<br>因为这种不同的保存方式，Git切换分支的速度比SVN快几条街！</p>
 <p><strong>第二个</strong>：<br><strong>Git每次commit时候，在仓库中的数据结构</strong>。</p>
@@ -168,15 +168,15 @@
 </ul>
 <hr>
 <h2 id="2-为什么要创建其他分支？"><a href="#2-为什么要创建其他分支？" class="headerlink" title="2.为什么要创建其他分支？"></a>2.为什么要创建其他分支？</h2><p>看到这个标题，读者可能会有<strong>疑问</strong>：不是已经有一个master分支了吗，为什么还要另外创建<br>其他分支？我们每次commit就好，假如是远程协作的话，就都Push到远程服务器上，有冲突<br>就解决冲突，然后每个人在pull一下服务器上的代码不就好了，另外创建新分支好像没什么<br>必要吧？</p>
-<p><strong>答</strong>：我以前也是这样想的，在上一家公司，我和另外的同事就是这样干的…把东西都丢到<br>master分支上，感觉没什么不对，当然，这种做法是可以的，项目小可以，整个项目就一个master分支，<br>但是这样做其实<strong>并不好</strong>！下面列举两点吧：<br><strong>第一点</strong>，我们一般的项目都是一步步迭代升级的，一般都会有大版本和小版本的更新，<br>大版本更新一般是改头换面的一个更新，比如UI大改或者架构大改之类的，然后版本是：v2.0.0这样；<br>而小版本的更新一般是一些细节的小改，比如UI修改和bug的修复，或者优化等，然后版本是:v2.0.11这样；<br>只有一条master分支，意味着你的分支线会非常非常的长，假如你发布了第二个大版本，而用户反馈<br>你的第一个版本有一个很严重的Bug，你要切回之前的版本，够呛的哈！<br><strong>第二点</strong>，效率问题，假如某一次提交后出现冲突了，而这个冲突很难解决，那么就会卡在这里，<br>那么就无法向后再开发了，又或者说master上的分支出现了很大的问题，同样也无法接着开发。</p>
+<p><strong>答</strong>：我以前也是这样想的，在上一家公司，我和另外的同事就是这样干的…把东西都丢到<br>master分支上，感觉没什么不对，当然，这种做法是可以的，项目小可以，整个项目就一个master分支，<br>但是这样做其实<strong>并不好</strong>！下面列举两点吧：<br><strong>第一点</strong>，我们一般的项目都是一步步迭代升级的，一般都会有大版本和小版本的更新，<br>大版本更新一般是改头换面的一个更新，比如UI大改或者架构大改之类的，然后版本是：v2.0.0这样；<br>而小版本的更新一般是一些细节的小改，比如UI修改和bug的修复，或者优化等，然后版本是:v2.0.11这样；<br>只有一条master分支，意味着你的分支线会非常非常的长，假如你发布了第二个大版本，而用户反馈<br>你的第一个版本有一个很严重的Bug，你要切回之前的版本，够呛！<br><strong>第二点</strong>，效率问题，假如某一次提交后出现冲突了，而这个冲突很难解决，那么就会卡在这里，<br>那么就无法向后再开发了，又或者说master上的分支出现了很大的问题，同样也无法接着开发。</p>
 <p>当然，不好的地方远远不止上面两个，我们得想办法来解决这个问题，而一个简单而有效的<br>方法就是创建其他的分支，然后按照一定的分支策略来管理我们的项目版本！一种最简单和<br>常用的分支策略就是：</p>
 <blockquote>
 <p>在<strong>master分支</strong>上开辟一个新的<strong>develop分支</strong>，然后我们根据功能或者业务，再在develop<br>分支上另外开辟<strong>其他分支</strong>，完成分支上的任务后，再将这个分支合并到<strong>develop分支</strong>上！</p>
 </blockquote>
 <p>master分支和develop分支都是<strong>长期分支</strong>，而我们创建的其他分支则是<strong>临时性分支</strong>！</p>
 <p>简单概括下各个分支都拿来干嘛吧：</p>
-<p><strong>master分支</strong>：可直接用于产品发布的代码，就是正式版的代码<br><strong>develop分支</strong>：日常开发用的分支，团队中的人都在这个分支上进行开发<br><strong>临时性分支</strong>：根据特定目的开辟的分支，包括<strong>功能(feature)</strong>分支，或者<strong>预发布(release)</strong>分支，<br>又或者是<strong>修复bug（fixbug）</strong>分支，临时性分支用完之后一般都会删除，使得代码库的常用分支始终<br>只有两个长期分支！</p>
-<p><strong>PS</strong>:关于分支管理的详细策略，我们后面讲多人协作再细讲，这里知道最简单的这种就可以了！</p>
+<p><strong>master分支</strong>：可直接用于产品发布的代码，就是正式版的代码<br><strong>develop分支</strong>：日常开发用的分支，团队中的人都在这个分支上进行开发<br><strong>临时性分支</strong>：根据特定目的开辟的分支，包括<strong>功能(feature)</strong>分支，或者<strong>预发布(release)</strong>分支，<br>又或者是<strong>修复bug（fixbug）</strong>分支，临时性分支用完之后一般都会合并分支后删除，使得代码库<br>的常用分支始终只有两个长期分支！</p>
+<p><strong>PS</strong>:关于分支管理的策略，后面在讲，这里知道最简单的这种就可以了！</p>
 <hr>
 <h2 id="3-分支的创建与切换"><a href="#3-分支的创建与切换" class="headerlink" title="3.分支的创建与切换"></a>3.分支的创建与切换</h2><h3 id="1）创建分支"><a href="#1）创建分支" class="headerlink" title="1）创建分支"></a>1）创建分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch 分支名</span><br></pre></td></tr></table></figure>
 <p><img src="http://static.zybuluo.com/coder-pig/av07ws6bb3hxvbtofozz51hh/1.png" alt=""></p>
@@ -195,7 +195,7 @@
 <p>接着我们切回master分支，键入:git checkout master，打开我们的note_1.txt，这个时候<br>你会发现并没有发生更改，因为我们刚刚的提交是在develop分支上进行的，而master分支上<br>没有变化，此时的版本线情况如下：</p>
 <p><img src="http://static.zybuluo.com/coder-pig/t8c9ml6zjtr1tm12l3nt4a7y/4.png" alt=""></p>
 <hr>
-<h2 id="4-分支的合并"><a href="#4-分支的合并" class="headerlink" title="4.分支的合并"></a>4.分支的合并</h2><p>在Git中，我们可以使用<strong>git merge</strong>和<strong>git rebase</strong>两个命令来进行分支的合并。<br>而本节我们主要讲解如何使用<strong>merge</strong>指令来合并分支，另外合并的方式又分为两种：<br>快速合并和普通合并，两者的区别在于前者合并后看不出曾经做过合并，而后者合并<br>后的历史会有分支记录！作图是快速合并，右图是普通合并！</p>
+<h2 id="4-分支的合并"><a href="#4-分支的合并" class="headerlink" title="4.分支的合并"></a>4.分支的合并</h2><p>在Git中，我们可以使用<strong>git merge</strong>和<strong>git rebase</strong>两个命令来进行分支的合并。<br>而本节我们主要讲解如何使用<strong>merge</strong>指令来合并分支，另外合并的方式又分为两种：<br>快速合并和普通合并，两者的区别在于前者合并后看不出曾经做过合并，而后者合并<br>后的历史会有分支记录！左图是快速合并，右图是普通合并！</p>
 <p><img src="http://static.zybuluo.com/coder-pig/minotfd8v4vpenvvbnaz281b/5.png" alt=""> <strong><strong><strong><strong>_</strong></strong></strong></strong> <img src="http://static.zybuluo.com/coder-pig/m77xl3wjjyad4bb0okz23vng/6.png" alt=""></p>
 <h3 id="1-快速合并"><a href="#1-快速合并" class="headerlink" title="1.快速合并"></a>1.快速合并</h3><p>我们把develop分支合并到master分支上，来到master分支后，键入下述命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge develop</span><br></pre></td></tr></table></figure>
@@ -210,7 +210,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --graph --pretty=oneline --abbrev-commit</span><br></pre></td></tr></table></figure>
 <p>结果如下：</p>
 <p><img src="http://static.zybuluo.com/coder-pig/xqvna3wjosyl3rjvuzpejhpv/10.png" alt=""></p>
-<p>当然，不是每次合并分支都是顺顺利利的，有事会发生合并冲突，这个时候，我们<br>需要处理冲突，完成后才能够进行合并！</p>
+<p>当然，不是每次合并分支都是顺顺利利的，有时会发生合并冲突，这个时候，我们<br>需要处理冲突，完成后才能够进行合并！</p>
 <hr>
 <h2 id="5-解决合并冲突"><a href="#5-解决合并冲突" class="headerlink" title="5.解决合并冲突"></a>5.解决合并冲突</h2><p>这里我们切到master分支下，修改note_3.txt，写点东西，add后提交，然后切到develop分支，<br>也是修改note_3.txt文件，add后commit，最后切回master分支，然后再执行merge合并分支。<br>这个时候就会出现合并失败，需要我们手动解决冲突后才能提交！</p>
 <p><img src="http://static.zybuluo.com/coder-pig/93kz1onopjwypvzeqjtm68wq/11.png" alt=""></p>
@@ -248,7 +248,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash apply stash@&#123;0&#125;</span><br></pre></td></tr></table></figure>
 <p>你只要修改{}里的标识符(数字)即可！</p>
 <hr>
-<h2 id="小结："><a href="#小结：" class="headerlink" title="小结："></a>小结：</h2><p>本节给大家讲解了一波Git的本地分支操作的命令，基本涵盖了一些日常的本地分支操作，<br>同样建议你跟着笔者的文章，一步步走指令，动手更有助于理解！下节我们来讲解远程<br>仓库和多人协作的分支管理策略！敬请期待~</p>
+<h2 id="小结："><a href="#小结：" class="headerlink" title="小结："></a>小结：</h2><p>本节给大家讲解了一波Git的本地分支操作的命令，基本涵盖了一些日常的本地分支操作，<br>同样建议你跟着笔者的文章，一步步走指令，动手更有助于理解！下节我们选择Github<br>作为我们的远程仓库，来讲解远程仓库的使用！</p>
 <hr>
 <p><strong>参考文献</strong>：</p>
 <blockquote>
@@ -280,7 +280,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/06/12/Git大法好——3.Git分支本地操作详解/" data-title="Git大法好——3.Git分支本地操作详解 | CoderPig的小世界" data-tsina="3263534374" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/06/12/Git大法好——3.Git分支本地操作详解/" data-title="Git大法好——Git大法好——3.Git分支本地操作详解 | CoderPig的小世界" data-tsina="3263534374" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -303,9 +303,9 @@
 
 
 <div class="next">
-<a href="/2016/06/12/Git大法好——2.Git本地操作指令详解/"  title="Git大法好——2.Git本地操作指令详解">
+<a href="/2016/06/12/Git大法好——2.Git本地操作指令详解/"  title="Git大法好——Git大法好——2.Git本地操作指令详解">
  <strong>下一篇：</strong><br/> 
- <span>Git大法好——2.Git本地操作指令详解
+ <span>Git大法好——Git大法好——2.Git本地操作指令详解
 </span>
 </a>
 </div>
@@ -314,7 +314,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/06/12/Git大法好——3.Git分支本地操作详解/" data-title="Git大法好——3.Git分支本地操作详解" data-url="http://yoursite.com/2016/06/12/Git大法好——3.Git分支本地操作详解/"></div>
+	<div class="ds-thread" data-thread-key="2016/06/12/Git大法好——3.Git分支本地操作详解/" data-title="Git大法好——Git大法好——3.Git分支本地操作详解" data-url="http://yoursite.com/2016/06/12/Git大法好——3.Git分支本地操作详解/"></div>
 </section>
 
 
@@ -419,7 +419,7 @@
 		
 		
 		
-		<a href="http://www.zhihu.com/people/https://www.zhihu.com/people/zhuang-pei-jie" target="_blank" class="icon-zhihu" title="知乎"></a>
+		<a href="http://www.zhihu.com/people/zhuang-pei-jie" target="_blank" class="icon-zhihu" title="知乎"></a>
 		
 		
 		

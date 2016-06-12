@@ -4,31 +4,27 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Git大法好——1.Git的引入以及概念解析 | CoderPig的小世界</title>
+    <title>Git大法好——4.Github作为远程仓库的使用详解 | CoderPig的小世界</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Coder-pig">
     
 
     
-    <meta name="description" content="Git大法好——1.Git的引入以及概念解析
-引言在前面学习安卓基础入门的时候，简单的讲解了一下Git的简单使用，几个基本的命令这样，让读者对Git有了初步的认识，而现在越来越多的开发团队采用Git作为版本控制工具，当然还有一些公司依旧用着SVN或者其他的版本控制工具，不过也会相信慢慢过渡，比如开发Android的两款主流IDE：Eclipse正在慢慢地被Android Studio替代！写Git">
+    <meta name="description" content="Git大法好——1.Git的引入以及概念解析引言在前面学习安卓基础入门的时候，简单的讲解了一下Git的简单使用，几个常用的基本的命令，让读者对Git有了初步的认识，而现在越来越多的开发团队采用Git作为版本控制工具，当然还有一些公司依旧用着SVN或者其他的版本控制工具，不过也会相信慢慢过渡，比如开发Android的两款主流IDE：Eclipse正在慢慢地被Android Studio替代！写Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git大法好——1.Git的引入以及概念解析">
+<meta property="og:title" content="Git大法好——4.Github作为远程仓库的使用详解">
 <meta property="og:url" content="http://yoursite.com/2016/06/12/Git大法好——1.Git的引入以及概念解析/index.html">
 <meta property="og:site_name" content="CoderPig的小世界">
-<meta property="og:description" content="Git大法好——1.Git的引入以及概念解析
-引言在前面学习安卓基础入门的时候，简单的讲解了一下Git的简单使用，几个基本的命令这样，让读者对Git有了初步的认识，而现在越来越多的开发团队采用Git作为版本控制工具，当然还有一些公司依旧用着SVN或者其他的版本控制工具，不过也会相信慢慢过渡，比如开发Android的两款主流IDE：Eclipse正在慢慢地被Android Studio替代！写Git">
-<meta property="og:image" content="http://static.zybuluo.com/coder-pig/cvapmdhifjskvgkha9pd07ya/1.gif">
+<meta property="og:description" content="Git大法好——1.Git的引入以及概念解析引言在前面学习安卓基础入门的时候，简单的讲解了一下Git的简单使用，几个常用的基本的命令，让读者对Git有了初步的认识，而现在越来越多的开发团队采用Git作为版本控制工具，当然还有一些公司依旧用着SVN或者其他的版本控制工具，不过也会相信慢慢过渡，比如开发Android的两款主流IDE：Eclipse正在慢慢地被Android Studio替代！写Git">
+<meta property="og:image" content="http://static.zybuluo.com/coder-pig/6hyic8x6tut1mrdvpm6z1yu3/QQ%E5%9B%BE%E7%89%8720160612194533.jpg">
 <meta property="og:image" content="http://7xjqvu.com1.z0.glb.clouddn.com/16-1-16/75062926.jpg">
 <meta property="og:image" content="http://static.zybuluo.com/coder-pig/i8fnl7mzbayxmp2pw3x0emx0/ci.png">
-<meta property="og:image" content="http://static.zybuluo.com/coder-pig/ijy3zolsi30gkpo22zmjfso3/QQ%E5%9B%BE%E7%89%8720160217234303.jpg">
-<meta property="og:updated_time" content="2016-06-12T03:57:49.864Z">
+<meta property="og:updated_time" content="2016-06-12T14:01:18.194Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git大法好——1.Git的引入以及概念解析">
-<meta name="twitter:description" content="Git大法好——1.Git的引入以及概念解析
-引言在前面学习安卓基础入门的时候，简单的讲解了一下Git的简单使用，几个基本的命令这样，让读者对Git有了初步的认识，而现在越来越多的开发团队采用Git作为版本控制工具，当然还有一些公司依旧用着SVN或者其他的版本控制工具，不过也会相信慢慢过渡，比如开发Android的两款主流IDE：Eclipse正在慢慢地被Android Studio替代！写Git">
-<meta name="twitter:image" content="http://static.zybuluo.com/coder-pig/cvapmdhifjskvgkha9pd07ya/1.gif">
+<meta name="twitter:title" content="Git大法好——4.Github作为远程仓库的使用详解">
+<meta name="twitter:description" content="Git大法好——1.Git的引入以及概念解析引言在前面学习安卓基础入门的时候，简单的讲解了一下Git的简单使用，几个常用的基本的命令，让读者对Git有了初步的认识，而现在越来越多的开发团队采用Git作为版本控制工具，当然还有一些公司依旧用着SVN或者其他的版本控制工具，不过也会相信慢慢过渡，比如开发Android的两款主流IDE：Eclipse正在慢慢地被Android Studio替代！写Git">
+<meta name="twitter:image" content="http://static.zybuluo.com/coder-pig/6hyic8x6tut1mrdvpm6z1yu3/QQ%E5%9B%BE%E7%89%8720160612194533.jpg">
 
     
     <link rel="alternative" href="/atom.xml" title="CoderPig的小世界" type="application/atom+xml">
@@ -92,14 +88,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/12/Git大法好——1.Git的引入以及概念解析/" title="Git大法好——1.Git的引入以及概念解析" itemprop="url">Git大法好——1.Git的引入以及概念解析</a>
+      <a href="/2016/06/12/Git大法好——1.Git的引入以及概念解析/" title="Git大法好——4.Github作为远程仓库的使用详解" itemprop="url">Git大法好——4.Github作为远程仓库的使用详解</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Coder-pig" target="_blank" itemprop="author">Coder-pig</a>
 		
   <p class="article-time">
-    <time datetime="2016-06-12T03:55:49.888Z" itemprop="datePublished"> 发表于 2016-06-12</time>
+    <time datetime="2016-06-12T14:01:16.380Z" itemprop="datePublished"> 发表于 2016-06-12</time>
     
   </p>
 </header>
@@ -112,8 +108,7 @@
 		
 		</div>
 		
-		<h1 id="Git大法好——1-Git的引入以及概念解析"><a href="#Git大法好——1-Git的引入以及概念解析" class="headerlink" title="Git大法好——1.Git的引入以及概念解析"></a>Git大法好——1.Git的引入以及概念解析</h1><hr>
-<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在前面学习安卓基础入门的时候，简单的讲解了一下Git的简单使用，几个基本的命令这样，<br>让读者对Git有了初步的认识，而现在越来越多的开发团队采用Git作为版本控制工具，当然<br>还有一些公司依旧用着SVN或者其他的版本控制工具，不过也会相信慢慢过渡，比如开发Android<br>的两款主流IDE：Eclipse正在慢慢地被Android Studio替代！写Git系列的教程，初衷是想<br>帮助一些刚接触版本控制，或者想从SVN转到Git上的朋友，能够快速，系统的掌握Git的使用！<br>而本节要讲解的内容Git的一些概念性的东西！内容如下：</p>
+		<h1 id="Git大法好——1-Git的引入以及概念解析"><a href="#Git大法好——1-Git的引入以及概念解析" class="headerlink" title="Git大法好——1.Git的引入以及概念解析"></a>Git大法好——1.Git的引入以及概念解析</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在前面学习安卓基础入门的时候，简单的讲解了一下Git的简单使用，几个常用的基本的命令，<br>让读者对Git有了初步的认识，而现在越来越多的开发团队采用Git作为版本控制工具，当然<br>还有一些公司依旧用着SVN或者其他的版本控制工具，不过也会相信慢慢过渡，比如开发<br>Android的两款主流IDE：Eclipse正在慢慢地被Android Studio替代！写Git系列的教程，初衷<br>是想帮助一些刚接触版本控制，或者想从SVN转到Git上的朋友，能够快速，系统的掌握Git的使用！<br>而本节要讲解的内容Git的一些概念性的东西！内容如下：</p>
 <blockquote>
 <ul>
 <li>1.Git的引入(团队协作中版本管理的一点点改进)</li>
@@ -124,25 +119,25 @@
 </blockquote>
 <p>以上就是本节要讲解的内容概要！下面我们来对一点点的学习Git吧！</p>
 <hr>
-<h2 id="1-Git的引入"><a href="#1-Git的引入" class="headerlink" title="1.Git的引入"></a>1.Git的引入</h2><p>不知道你有没有和别人一起开发过同一个项目，没有也关系，我们举个例子来体验版本控制的变化：<br>假如开发团队有小猪，B神，基神三个Android开发人员，而我们现在需要一起协作完成一个XX的APP，<br>简单的分工后，我负责A模块，B神负责B模块，基神负责C模块，分工完后，我们要面对的问题就是<br>我们如何一起开发这个项目？我们通过一个个方案暴露的问题，一步步引入Git~</p>
+<h2 id="1-Git的引入"><a href="#1-Git的引入" class="headerlink" title="1.Git的引入"></a>1.Git的引入</h2><p>不知道你有没有和别人一起开发过同一个项目，没有也关系，我们举个例子来体验下<br>版本控制工具对于项目管理的重要性以及给我们带来的便利：<br>假如开发团队有小猪，B神，基神三个Android开发人员，而我们现在需要一起协作完<br>成一个XX的APP，简单的分工后，我负责A模块，B神负责B模块，基神负责C模块，分工<br>完后，我们要面对的问题就是我们如何一起开发这个项目？我们通过一个个方案暴露<br>的问题，一步步引入Git。</p>
 <blockquote>
-<p><strong>方案1</strong>：我先做完A模块，然后B神再在A模块的基础上来做B模块，最后再由基神完成C模块。</p>
+<p><strong>方案1</strong>：小猪先完成A模块，然后B神再在A模块的基础上来做B模块，最后再由基神完成C模块。</p>
 </blockquote>
-<p> 这样是可以，但假如这样做的话，效率会很低，很多时间都花在等待上，开发周期也会非常的长，<br> 而且和一个人完成整个项目没什么区别，而这种也是大学做小组形式的课程设计的一种合作形式。</p>
+<p> 这样是可以，但假如这样做的话，效率很低，大部分时间都花在等待上，开发周期也<br> 会非常的长，而且和一个人完成整个项目没什么区别，而这种是大学做小组形式的课<br> 程设计的一种合作形式。</p>
 <blockquote>
-<p><strong>方案2</strong>：并行的开发，就是自己写自己的，等三个人都完成后，再进行整合。</p>
+<p><strong>方案2</strong>：并行的开发，就是自己写自己的，等三个人都完成后，再整合到一起。</p>
 </blockquote>
-<p>同样也是可以的，但是等到最后再整合，这个整合的人是谁好？相信此时的代码量会非常的庞大，<br>记得小猪以前有一个XX门诊管理系统的小组课程设计，项目很小，逻辑也很简单，然而整合却花了<br>大概一周的时间，然后还各种莫名其妙的Bug(最后不了了之)…同样这也是大学小组课程设计的<br>另一种合作形式。我们需要想办法减少代码的合并难度，比如每天合并一次大家编写的代码，这样<br>做还有另一个好处就是可以清楚的知道每一个人的当天的工作进度，于是乎我们衍生出方案3。</p>
+<p>同样也是可以的，但是等到最后再整合，这个整合的人是谁好？相信此时的代码量会<br>非常的庞大，记得小猪以前有一个XX门诊管理系统的小组课程设计，项目很小，逻辑<br>也很简单，然而整合却花了大概一周的时间，然后还各种莫名其妙的Bug(最后不了了之)…<br>同样这也是大学小组课程设计的另一种合作形式。我们需要想办法<strong>减少代码的合并难度</strong>，<br>比如每天合并一次大家编写的代码，这样做还有另一个好处就是可以清楚的知道每一个人<br>的当天的工作进度，于是乎我们衍生出方案3。</p>
 <blockquote>
-<p><strong>方案3(SVN)</strong>：将工程代码托管到某个服务器上，每天开始工作时，先把服务器的代码同步<br>到本地，然后再进行开发，然后工作结束后，把代码提交到服务器，此时可能需要解决冲突<br>(服务器上的代码和本地的代码有不同的地方)问题，冲突解决后，再次提交代码。</p>
+<p><strong>方案3(SVN)</strong>：将工程代码托管到某个服务器上，每天开始工作时，先把服务器<br>的代码同步到本地，然后再进行开发，然后工作结束后，把代码提交到服务器，此时可能<br>需要解决冲突(服务器上的代码和本地的代码有不同的地方)问题，冲突解决后，再次提交代码。</p>
 </blockquote>
-<p>上面的这种方案其实就是SVN版本控制系统的工作流程，SVN是一种<strong>集中式</strong>的版本控制系统，<br>集中式体现在：我们需要一个中央的服务器，工作的时候我们需要先从这个中央服务器获取到<br>项目当前的最新版本，然后才开始干活，做完后，再把自己的修改推送给中央服务器！<br>同样也暴露了一个明显的<strong>缺点</strong>：<br><strong>需要联网</strong>，我们才能够使用SVN，而且会受网络速度的限制，内网还可以，外网的话，<br>上传速度可能会很慢。另外还有，依赖于中央服务器，假如某天服务器宕机了，那么谁也<br>无法提交代码…<br>当然<strong>优点</strong>也是有的：易于管理，权限管理机制，可以确保安全性。<br>现在还有一些公司使用SVN进行项目版本管理，而且大部分大学开设的课程讲解的也是SVN，<br>关于SVN的使用不在此讲解，有兴趣的可自行查阅相关文献~</p>
+<p>上面的这种方案其实就是SVN版本控制系统的工作流程，SVN是一种<strong>集中式</strong>的版本控制系统，<br>集中式体现在：我们需要一个中央的服务器，工作的时候我们需要先从这个中央服务器获取到<br>项目当前的最新版本，然后才开始干活，做完后，再把自己的修改推送给中央服务器！<br>同样也暴露了一个明显的<strong>缺点</strong>：<br><strong>需要联网</strong>，我们才能够使用SVN，而且会受网络速度的限制，内网还可以，外网的话，<br>上传或同步的速度可能会很慢。另外还有，依赖于中央服务器，假如某天服务器宕机了，<br>那么谁也无法提交代码…<br>当然<strong>优点</strong>也是有的：易于管理，权限管理机制，可以确保安全性。<br>现在还有一些公司使用SVN进行项目版本管理，而且大部分大学开设的课程讲解的也是SVN，<br>关于SVN的使用不在此讲解，有兴趣的可自行查阅相关文献。</p>
 <blockquote>
 <p><strong>方案4(Git)</strong>：我们可以将工程托管到服务器上(比如Github)，将它作为远程仓库，<br>我们一般会在服务端建立两个分支:master分支(保存稳定版)，developer分支(平时提交的<br>代码)，然后开发人员根据不同的任务，建立本地分支，在该分支上进行开发，工作完成后<br>将代码push到developer分支上，假如有冲突，则要先解决冲突，而后还可能需要merge或者<br>rebase。(PS:关于分支的内容，后面会细讲，别急~)</p>
 </blockquote>
-<p>相比起SVN，Git的优势有以下几点：支持离线提交，更加强大的分支管理等；<br>Git是一个快速的分布式的版本控制系统，和其他的版本控制系统的差别在于Git直接记录<strong>快照</strong>，<br>而不是差异比较！差异比较的版本控制系统只关心文件内容的具体差异，然后每次记录哪些文件做<br>了更新，以及更新了哪些行的内容！当我们想切换到以前某个版本的时候，我们需要merge，而<br>Git在每次commit时，都会<strong>完整的存储当前版本所有修改的文件</strong>，而不是只存储diff，<br>所以想切换都某个历史版本只需简单的reset即可！</p>
-<p>上面我们通过简单的例子引入了Git这个东东，可能你对Git还是有点陌生，有点畏惧，没事，<br>我们一步步来，把关键点给掌握了，就可以解锁更多姿势了~</p>
-<p><img src="http://static.zybuluo.com/coder-pig/cvapmdhifjskvgkha9pd07ya/1.gif" alt=""></p>
+<p>相比起SVN，Git的优势有以下几点：<strong>支持离线提交</strong>，<strong>更加强大的分支管理等</strong>；<br>Git是一个快速的分布式的版本控制系统，和其他的版本控制系统的差别在于Git直接记录<strong>快照</strong>，<br>而不是差异比较！差异比较的版本控制系统只关心文件内容的具体差异，然后每次记录哪些文件做<br>了更新，以及更新了哪些行的内容！当我们想切换到以前某个版本的时候，我们需要merge，而<br>Git在每次commit时，都会<strong>完整的存储当前版本所有修改的文件</strong>，而不是只存储diff，<br>所以想切换都某个历史版本只需简单的reset即可！</p>
+<p>上面我们通过简单的例子引入了Git，可能你对Git还是有点陌生，有点畏惧，没事，<br>我们一步步来，把关键点给掌握了，你会发现Git其实没你想象中那么复杂。</p>
+<p><img src="http://static.zybuluo.com/coder-pig/6hyic8x6tut1mrdvpm6z1yu3/QQ%E5%9B%BE%E7%89%8720160612194533.jpg" alt=""> 继续学下去，解锁更多姿势~</p>
 <hr>
 <h2 id="2-Git的四个组成部分"><a href="#2-Git的四个组成部分" class="headerlink" title="2.Git的四个组成部分"></a>2.Git的四个组成部分</h2><p>我们首先要知道Git由四部分组成，他们分别是：</p>
 <blockquote>
@@ -155,24 +150,22 @@
 </blockquote>
 <p>下面我们一一来介绍这四个部分：</p>
 <blockquote>
-<p>首先是工作区，这个就不用说了，我们当前的工作空间；而另外三个部分，我决定举一个<br>形象化的例子来帮助大家理解，网购的例子，比如我们在逛着某猫：<br><strong>—&gt;</strong> 看到了心仪的物品，我们可以把商品添加到<strong>购物车(暂存区)</strong>，我们可能会频繁的<br><strong>添加商品(add)</strong>或者<strong>移除商品(checkout)</strong>，在这个过程中我们可以随便嗨，反正还没<br>给钱；<br><strong>—&gt;</strong> 接着我们挑的七七八八了，接着我们就要提交我们的订单了，点击<strong>提交订单(commit)</strong>，<br>接着会生成一个商品的<strong>订单列表(快照)</strong>，我们还可以在提交的时候添加点备注信息，比如<br>要什么颜色(<strong>commit -m “颜色”</strong>)，好的，此时订单提交了，但是我们还没<strong>支付(Push)</strong>，<br>我们可以在自己的账户<strong>未支付订单列表(本地仓库)</strong>中找到我们的这个<strong>订单订单(快照)</strong>，<br>也可以看到自己以前的一些订单记录；<br><strong>—&gt;</strong> 再接着我们选择这个还没付款的订单，进行<strong>支付(Push)</strong>，付款完成后，<strong>商家(远程仓库)</strong><br>就会收到这个订单，然后发货…</p>
+<p>首先是工作区，这个就不用说了，我们当前的工作空间；而另外三个部分，我决定举一个<br>形象化的例子来帮助大家理解，网购的例子，比如我们在逛着某猫：<br><strong>—&gt;</strong> 看到了心仪的物品，我们可以把商品先放到<strong>购物车(暂存区)</strong>，我们可能会频繁的<br><strong>添加商品(add)</strong>或者<strong>移除商品(checkout)</strong>，在这个过程中我们可以随便嗨，反正还没<br>给钱；<br><strong>—&gt;</strong> 接着我们挑的七七八八了，接着我们想提交我们的订单了，点击<strong>提交订单(commit)</strong>，<br>接着会生成一个商品的<strong>订单列表(快照)</strong>，我们还可以在提交的时候添加点备注信息，比如<br>要什么颜色(<strong>commit -m “颜色”</strong>)，好的，此时订单提交了，但是我们还没<strong>支付(Push)</strong>，<br>我们可以在自己的账户<strong>未支付订单列表(本地仓库)</strong>中找到我们的这个<strong>订单订单(快照)</strong>，<br>也可以看到自己以前的一些订单记录；<br><strong>—&gt;</strong> 再接着我们选择这个还没付款的订单，进行<strong>支付(Push)</strong>，付款完成后，<strong>商家(远程仓库)</strong><br>就会收到这个订单，然后发货…</p>
 </blockquote>
 <p>相信上面的这个例子对你理解Git的四个部分会有所帮助，回到正题，我们简单概括下这四个部分<br>在日常协作中是如何发挥作用的：</p>
 <blockquote>
 <p><strong>工作区和暂存区</strong>：<br>我们写代码的地方就是工作区，代码写完后，我们可以把他提交到暂存区，提交到暂存区后，我们<br>可以对自己的代码进行更改，修改文件内容，删除或者增加文件，只需一个git checkout xx即可让<br>暂存区内容覆盖当前工作区的内容，或者说还原！</p>
 <p><strong>暂存区和本地仓库</strong>：<br>我们可以把暂存区的内容提交到我们的本地仓库，此时会在仓库中生成一个快照，我们可以为这个<br>快照打一个TAG信息，比如这个快照叫”完成了UI部分”这样，提交后暂存区中的内容就会被清空，<br>此时我们可以调用reset指令，制定某个快照，然后还原到暂存区！</p>
 <p><strong>工作区和本地仓库</strong>：<br>我们可以直接走checkout某个版本的指令，直接让工作空间还原成某个本地仓库中的某个快照。</p>
-<p><strong>本地仓库和远程仓库</strong>：</p>
-<p>我们可以将本地的某个快照push推送到远程仓库，push时可能还需处理一些冲突；<br>也可以从拉取远程仓库到本地，比如我们经常从Github上clone一些开源项目~</p>
-<p><strong>工作区和远程仓库</strong>：</p>
-<p>这两者的协作一般是pull，即同步远程仓库的代码到工作空间而已~</p>
+<p><strong>本地仓库和远程仓库</strong>：<br>我们可以将本地的某个快照push推送到远程仓库，push时可能还需处理一些冲突；<br>也可以从拉取远程仓库到本地，比如我们经常从Github上clone一些开源项目~</p>
+<p><strong>工作区和远程仓库</strong>：<br>这两者的协作一般是pull，即同步远程仓库的代码到工作空间。</p>
 </blockquote>
 <p>我们把上面的协作内容化成一个流程图，可以帮助我们更好的理解：</p>
 <p><img src="http://7xjqvu.com1.z0.glb.clouddn.com/16-1-16/75062926.jpg" alt=""></p>
 <hr>
 <h2 id="3-Git中文件的几个状态"><a href="#3-Git中文件的几个状态" class="headerlink" title="3.Git中文件的几个状态"></a>3.Git中文件的几个状态</h2><p>分大类的话，两种状态：<strong>Tracked</strong>(已跟踪)和<strong>Untracked</strong>(未跟踪)，区分的依据是：<br><strong>该文件是否已经加入版本控制</strong>？当我们在项目中新增一个文件，这个文件此时就处于<strong>Untracked</strong>状态！<br>接着我们可以调用git add指令将该文件加入暂存区，那么此时该文件此时处于<strong>Tracked</strong>状态，又或者说<br>这个文件已经被我们的版本控制系统所跟踪了，而且他处于<strong>Staged(暂存)</strong>状态！接着，当我们把<br>暂存区的文件commit后，此时该文件处于<strong>Unmodified(未修改)</strong>状态；此时假如我们编辑下该文件，<br>文件又会变成<strong>Modified(修改)</strong>状态，接着git add又处于<strong>Staged(暂存)</strong>状态，然后commit…<br><strong>文件的变化周期流程图如下</strong>：</p>
 <p><img src="http://static.zybuluo.com/coder-pig/i8fnl7mzbayxmp2pw3x0emx0/ci.png" alt=""></p>
-<p>这里这样说，可能你有些不太了解，没事，打开Android Studio对某个文件做下上述操作，从文件列表<br>就可以看到明显的颜色变化，比如Untracked是红色，git add后变成蓝色，git commit后变成普通颜色，<br>关于指令我们下一节讲，你到时自己留意下就知道了~</p>
+<p>这里这样说，可能你有些不太了解，没事，打开Android Studio对某个文件做下上述操作，从文件列表<br>就可以看到明显的颜色变化，比如Untracked是红色，git add后变成蓝色，git commit后变成普通颜色，<br>关于指令我们下一节讲，你到时自己留意下就知道了。</p>
 <hr>
 <h2 id="4-Git的下载安装"><a href="#4-Git的下载安装" class="headerlink" title="4.Git的下载安装"></a>4.Git的下载安装</h2><p>好了，关键的概念也就是上面这两点，接下来就是Git的一个下载安装了！</p>
 <ul>
@@ -186,7 +179,7 @@
 <p>安装完Git后，我们就可以打开Git命令行：</p>
 <p><strong>Windows</strong>在任意位置右键，点击Git Bash打开Git命令行<br><strong>Ubuntu</strong>下直接打开Terminal就可以，Terminal的快捷键是:<strong>ctrl + alt + t</strong></p>
 <blockquote>
-<p>这里说下为什么要使用命令行：<br><strong>秀</strong>，装比必备，啪啪啪敲一堆指令，逼格报表；<br><strong>减少跨平台使用Git的成本</strong>：<br>比如你熟悉了Win下某个Git的GUI工具，但是加入某一天你要迁移到Linux上，全是命令<br>行，你怎么玩…或者需要换另一个新的GUI工具，你又需要花时间去熟悉这个工具的使用。<br>当然还是看自己吧，也没一定要命令行，你也可以用图形化工具，比如后面也会讲下在<br>Android Studio上使用Git！</p>
+<p>这里说下为什么要使用命令行：<br><strong>秀</strong>，装比必备，啪啪啪敲一堆指令，逼格报表，最主要的原因是<strong>减少跨平台使用Git的成本</strong>：<br>比如你熟悉了Win下某个Git的GUI工具，但是加入某一天你要迁移到Linux上，全是命令<br>行，你怎么玩…或者需要换另一个新的GUI工具，你又需要花时间去熟悉这个工具的使用。<br>当然还是看自己吧，也没一定要命令行，你也可以用图形化工具，比如后面也会讲下在<br>Android Studio上使用Git！</p>
 </blockquote>
 <hr>
 <h2 id="5-Git的官方文档："><a href="#5-Git的官方文档：" class="headerlink" title="5.Git的官方文档："></a>5.Git的官方文档：</h2><ul>
@@ -194,8 +187,6 @@
 <li><a href="http://git.oschina.net/progit/index.html" target="_blank" rel="external">Pro Git(oschina)</a></li>
 </ul>
 <hr>
-<p>PS:项目的进度比较赶，偶尔晚上需要加加班，而且双休变成了大小周，空余的时间少了很多，<br>写东西和自由学习的时间很少，唉，有点想念上学时候的自由时光了，起码可以睡睡懒觉哈…<br>偶尔空闲写下，别期望太大，关于进阶部分写什么还在构思，目前暂定第一章节是Git大法好，<br>因为自己工作Git命令行用的很频繁，而且群里之前有人反馈过，所以还是决定深究下Git！<br>另外祝各位新的一年，开工大吉~</p>
-<p><img src="http://static.zybuluo.com/coder-pig/ijy3zolsi30gkpo22zmjfso3/QQ%E5%9B%BE%E7%89%8720160217234303.jpg" alt=""></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -218,7 +209,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/06/12/Git大法好——1.Git的引入以及概念解析/" data-title="Git大法好——1.Git的引入以及概念解析 | CoderPig的小世界" data-tsina="3263534374" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/06/12/Git大法好——1.Git的引入以及概念解析/" data-title="Git大法好——4.Github作为远程仓库的使用详解 | CoderPig的小世界" data-tsina="3263534374" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -231,20 +222,20 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/06/12/Git大法好——2.Git本地操作指令详解/" title="Git大法好——2.Git本地操作指令详解">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Git大法好——2.Git本地操作指令详解</span>
+
+<div class="next">
+<a href="/2016/06/12/Git大法好——4.Github作为远程仓库的使用详解/"  title="Git大法好——4.Github作为远程仓库的使用详解">
+ <strong>下一篇：</strong><br/> 
+ <span>Git大法好——4.Github作为远程仓库的使用详解
+</span>
 </a>
 </div>
-
 
 </nav>
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/06/12/Git大法好——1.Git的引入以及概念解析/" data-title="Git大法好——1.Git的引入以及概念解析" data-url="http://yoursite.com/2016/06/12/Git大法好——1.Git的引入以及概念解析/"></div>
+	<div class="ds-thread" data-thread-key="2016/06/12/Git大法好——1.Git的引入以及概念解析/" data-title="Git大法好——4.Github作为远程仓库的使用详解" data-url="http://yoursite.com/2016/06/12/Git大法好——1.Git的引入以及概念解析/"></div>
 </section>
 
 
@@ -349,7 +340,7 @@
 		
 		
 		
-		<a href="http://www.zhihu.com/people/https://www.zhihu.com/people/zhuang-pei-jie" target="_blank" class="icon-zhihu" title="知乎"></a>
+		<a href="http://www.zhihu.com/people/zhuang-pei-jie" target="_blank" class="icon-zhihu" title="知乎"></a>
 		
 		
 		
