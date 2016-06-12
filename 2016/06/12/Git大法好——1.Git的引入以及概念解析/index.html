@@ -250,16 +250,6 @@
 <aside class="clearfix">
 
   
-<div class="github-card">
-<p class="asidetitle">Github 名片</p>
-<div class="github-card" data-github="https://github.com/coder-pig" data-width="220" data-height="119" data-theme="medium">
-<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
-</div>
-  </div>
-
-
-
-  
 <div class="categorieslist">
 	<p class="asidetitle">分类</p>
 		<ul>
@@ -400,11 +390,6 @@ $(document).ready(function(){
   $(window).scroll(function(){
     o.css("top",Math.max(80,260-$(this).scrollTop()));
   });
-  
-        getSize();
-        if (myWidth >= 1024) {
-          c.click();
-        }
   
   $(window).resize(function(){
     getSize(); 
