@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Git大法好——4.Github作为远程仓库的使用详解 | CoderPig的小世界</title>
+    <title>Git大法好——1.Git的引入以及概念解析 | CoderPig的小世界</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Coder-pig">
@@ -13,16 +13,16 @@
     
     <meta name="description" content="Git大法好——1.Git的引入以及概念解析引言在前面学习安卓基础入门的时候，简单的讲解了一下Git的简单使用，几个常用的基本的命令，让读者对Git有了初步的认识，而现在越来越多的开发团队采用Git作为版本控制工具，当然还有一些公司依旧用着SVN或者其他的版本控制工具，不过也会相信慢慢过渡，比如开发Android的两款主流IDE：Eclipse正在慢慢地被Android Studio替代！写Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git大法好——4.Github作为远程仓库的使用详解">
-<meta property="og:url" content="http://yoursite.com/2016/06/12/Git大法好——1.Git的引入以及概念解析/index.html">
+<meta property="og:title" content="Git大法好——1.Git的引入以及概念解析">
+<meta property="og:url" content="http://yoursite.com/2016/06/13/Git大法好——1.Git的引入以及概念解析/index.html">
 <meta property="og:site_name" content="CoderPig的小世界">
 <meta property="og:description" content="Git大法好——1.Git的引入以及概念解析引言在前面学习安卓基础入门的时候，简单的讲解了一下Git的简单使用，几个常用的基本的命令，让读者对Git有了初步的认识，而现在越来越多的开发团队采用Git作为版本控制工具，当然还有一些公司依旧用着SVN或者其他的版本控制工具，不过也会相信慢慢过渡，比如开发Android的两款主流IDE：Eclipse正在慢慢地被Android Studio替代！写Git">
 <meta property="og:image" content="http://static.zybuluo.com/coder-pig/6hyic8x6tut1mrdvpm6z1yu3/QQ%E5%9B%BE%E7%89%8720160612194533.jpg">
 <meta property="og:image" content="http://7xjqvu.com1.z0.glb.clouddn.com/16-1-16/75062926.jpg">
 <meta property="og:image" content="http://static.zybuluo.com/coder-pig/i8fnl7mzbayxmp2pw3x0emx0/ci.png">
-<meta property="og:updated_time" content="2016-06-12T14:01:18.194Z">
+<meta property="og:updated_time" content="2016-06-13T02:11:10.048Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git大法好——4.Github作为远程仓库的使用详解">
+<meta name="twitter:title" content="Git大法好——1.Git的引入以及概念解析">
 <meta name="twitter:description" content="Git大法好——1.Git的引入以及概念解析引言在前面学习安卓基础入门的时候，简单的讲解了一下Git的简单使用，几个常用的基本的命令，让读者对Git有了初步的认识，而现在越来越多的开发团队采用Git作为版本控制工具，当然还有一些公司依旧用着SVN或者其他的版本控制工具，不过也会相信慢慢过渡，比如开发Android的两款主流IDE：Eclipse正在慢慢地被Android Studio替代！写Git">
 <meta name="twitter:image" content="http://static.zybuluo.com/coder-pig/6hyic8x6tut1mrdvpm6z1yu3/QQ%E5%9B%BE%E7%89%8720160612194533.jpg">
 
@@ -88,14 +88,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/12/Git大法好——1.Git的引入以及概念解析/" title="Git大法好——4.Github作为远程仓库的使用详解" itemprop="url">Git大法好——4.Github作为远程仓库的使用详解</a>
+      <a href="/2016/06/13/Git大法好——1.Git的引入以及概念解析/" title="Git大法好——1.Git的引入以及概念解析" itemprop="url">Git大法好——1.Git的引入以及概念解析</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Coder-pig" target="_blank" itemprop="author">Coder-pig</a>
 		
   <p class="article-time">
-    <time datetime="2016-06-12T14:01:16.380Z" itemprop="datePublished"> 发表于 2016-06-12</time>
+    <time datetime="2016-06-13T02:11:04.733Z" itemprop="datePublished"> 发表于 2016-06-13</time>
     
   </p>
 </header>
@@ -209,7 +209,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/06/12/Git大法好——1.Git的引入以及概念解析/" data-title="Git大法好——4.Github作为远程仓库的使用详解 | CoderPig的小世界" data-tsina="3263534374" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/06/13/Git大法好——1.Git的引入以及概念解析/" data-title="Git大法好——1.Git的引入以及概念解析 | CoderPig的小世界" data-tsina="3263534374" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -222,20 +222,20 @@
 	
 <nav class="article-nav clearfix">
  
-
-<div class="next">
-<a href="/2016/06/12/Git大法好——4.Github作为远程仓库的使用详解/"  title="Git大法好——4.Github作为远程仓库的使用详解">
- <strong>下一篇：</strong><br/> 
- <span>Git大法好——4.Github作为远程仓库的使用详解
-</span>
+ <div class="prev" >
+ <a href="/2016/06/13/Git大法好——2.Git本地操作指令详解/" title="Git大法好——2.Git本地操作指令详解">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Git大法好——2.Git本地操作指令详解</span>
 </a>
 </div>
+
 
 </nav>
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/06/12/Git大法好——1.Git的引入以及概念解析/" data-title="Git大法好——4.Github作为远程仓库的使用详解" data-url="http://yoursite.com/2016/06/12/Git大法好——1.Git的引入以及概念解析/"></div>
+	<div class="ds-thread" data-thread-key="2016/06/13/Git大法好——1.Git的引入以及概念解析/" data-title="Git大法好——1.Git的引入以及概念解析" data-url="http://yoursite.com/2016/06/13/Git大法好——1.Git的引入以及概念解析/"></div>
 </section>
 
 
