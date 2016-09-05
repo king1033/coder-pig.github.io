@@ -1,0 +1,779 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Android开发学习相关整理 | CoderPig的小世界</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Coder-pig">
+    
+
+    
+    <meta name="description" content="本文声明：
+
+本文的内容整理自网络，本着知识交流分享的原则，请勿用于商业用途，对于引用的部分，都已在文中指出，如果有遗漏的，可以联系本人加上，若有侵权，也请指出，本人将及时删掉侵权内容，万分感谢。本项目会长期更新，一个人的力量是有限的，欢迎提Issues或Merge Request~
+
+Android-Resources-Hodgepodge(Android资源大杂烩)
+1.教程/文档
+
+Andr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android开发学习相关整理">
+<meta property="og:url" content="http://yoursite.com/2016/09/05/Android-Resources-Hodgepodge(Android资源大杂烩)/index.html">
+<meta property="og:site_name" content="CoderPig的小世界">
+<meta property="og:description" content="本文声明：
+
+本文的内容整理自网络，本着知识交流分享的原则，请勿用于商业用途，对于引用的部分，都已在文中指出，如果有遗漏的，可以联系本人加上，若有侵权，也请指出，本人将及时删掉侵权内容，万分感谢。本项目会长期更新，一个人的力量是有限的，欢迎提Issues或Merge Request~
+
+Android-Resources-Hodgepodge(Android资源大杂烩)
+1.教程/文档
+
+Andr">
+<meta property="og:updated_time" content="2016-09-05T03:06:02.202Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android开发学习相关整理">
+<meta name="twitter:description" content="本文声明：
+
+本文的内容整理自网络，本着知识交流分享的原则，请勿用于商业用途，对于引用的部分，都已在文中指出，如果有遗漏的，可以联系本人加上，若有侵权，也请指出，本人将及时删掉侵权内容，万分感谢。本项目会长期更新，一个人的力量是有限的，欢迎提Issues或Merge Request~
+
+Android-Resources-Hodgepodge(Android资源大杂烩)
+1.教程/文档
+
+Andr">
+
+    
+    <link rel="alternative" href="/atom.xml" title="CoderPig的小世界" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/mouse_icon.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/mouse_icon.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/mouse_icon.png" alt="CoderPig的小世界" title="CoderPig的小世界"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="CoderPig的小世界">CoderPig的小世界</a></h1>
+				<h2 class="blog-motto">Before finding the right person, the only thing need to do is to make yourself good enough.</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/categories">分类</a></li>
+					
+						<li><a href="/tags">标签</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+						<form class="search" action="http://znsv.baidu.com/customer_search/" target="_blank">
+							<label>Search</label>
+						<input name="s" type="hidden" value= 10969979416646924000 ><input type="text" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/09/05/Android-Resources-Hodgepodge(Android资源大杂烩)/" title="Android开发学习相关整理" itemprop="url">Android开发学习相关整理</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Coder-pig" target="_blank" itemprop="author">Coder-pig</a>
+		
+  <p class="article-time">
+    <time datetime="2016-09-05T03:06:24.496Z" itemprop="datePublished"> 发表于 2016-09-05</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Android-Resources-Hodgepodge-Android资源大杂烩"><span class="toc-number">1.</span> <span class="toc-text">Android-Resources-Hodgepodge(Android资源大杂烩)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-教程-文档"><span class="toc-number">1.1.</span> <span class="toc-text">1.教程/文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-开源项目"><span class="toc-number">1.2.</span> <span class="toc-text">2.开源项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-编码规范-项目协作"><span class="toc-number">1.3.</span> <span class="toc-text">3.编码规范/项目协作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-网络期刊"><span class="toc-number">1.4.</span> <span class="toc-text">4.网络期刊</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-技术社区"><span class="toc-number">1.5.</span> <span class="toc-text">5.技术社区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-开发资源"><span class="toc-number">1.6.</span> <span class="toc-text">6.开发资源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#工具-Demo-Library"><span class="toc-number">1.6.1.</span> <span class="toc-text">工具/Demo/Library</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常备工具网址"><span class="toc-number">1.6.2.</span> <span class="toc-text">常备工具网址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-Studio-插件"><span class="toc-number">1.6.3.</span> <span class="toc-text">Android Studio 插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chrome插件"><span class="toc-number">1.6.4.</span> <span class="toc-text">Chrome插件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-知-逼-乎专栏"><span class="toc-number">1.7.</span> <span class="toc-text">7.知(逼)乎专栏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-简书专题"><span class="toc-number">1.8.</span> <span class="toc-text">8.简书专题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-公众号"><span class="toc-number">1.9.</span> <span class="toc-text">9.公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-视频教程"><span class="toc-number">1.10.</span> <span class="toc-text">10.视频教程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-面试相关"><span class="toc-number">1.11.</span> <span class="toc-text">11.面试相关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-精美APP观摩-推广-评测-软文"><span class="toc-number">1.12.</span> <span class="toc-text">12.精美APP观摩(推广)/评测/软文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考网站"><span class="toc-number">1.13.</span> <span class="toc-text">参考网站</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<p><strong>本文声明</strong>：</p>
+<blockquote>
+<p>本文的内容整理自网络，本着知识交流分享的原则，请勿用于商业用途，<br>对于引用的部分，都已在文中指出，如果有遗漏的，可以联系本人加上，若有<br>侵权，也请指出，本人将及时删掉侵权内容，万分感谢。<br>本项目会长期更新，一个人的力量是有限的，欢迎提Issues或Merge Request~</p>
+</blockquote>
+<h1 id="Android-Resources-Hodgepodge-Android资源大杂烩"><a href="#Android-Resources-Hodgepodge-Android资源大杂烩" class="headerlink" title="Android-Resources-Hodgepodge(Android资源大杂烩)"></a>Android-Resources-Hodgepodge(Android资源大杂烩)</h1><hr>
+<h2 id="1-教程-文档"><a href="#1-教程-文档" class="headerlink" title="1.教程/文档"></a>1.教程/文档</h2><hr>
+<ul>
+<li><strong>Android Developer</strong>(官网)：<a href="https://developer.android.com/index.html" target="_blank" rel="external">https://developer.android.com/index.html</a><br><strong>无需梯子版</strong>：<a href="http://androiddoc.qiniudn.com/index.html" target="_blank" rel="external">http://androiddoc.qiniudn.com/index.html</a><br><strong>无需梯子中文版</strong>(部分中文)：<a href="http://www.android-doc.com/" target="_blank" rel="external">http://www.android-doc.com/</a></li>
+<li><strong>Google Android Developers Blog</strong>(官博)：<a href="http://android-developers.blogspot.jp/" target="_blank" rel="external">http://android-developers.blogspot.jp/</a></li>
+<li><strong>JDK 1.7 API</strong>：<a href="http://tool.oschina.net/apidocs/apidoc?api=jdk_7u4" target="_blank" rel="external">http://tool.oschina.net/apidocs/apidoc?api=jdk_7u4</a>)</li>
+<li><strong>JDK 1.6 API</strong>(中文)：<a href="http://tool.oschina.net/apidocs/apidoc?api=jdk-zh" target="_blank" rel="external">http://tool.oschina.net/apidocs/apidoc?api=jdk-zh</a></li>
+<li><strong>Android Training</strong>：<a href="https://developer.android.com/training/index.html" target="_blank" rel="external">https://developer.android.com/training/index.html</a><br><strong>中文版</strong>：<a href="http://hukai.me/android-training-course-in-chinese/index.html" target="_blank" rel="external">http://hukai.me/android-training-course-in-chinese/index.html</a></li>
+<li><strong>Android Weekly</strong>：<a href="http://androidweekly.net/" target="_blank" rel="external">http://androidweekly.net/</a><br><strong>中文版</strong>：<a href="http://wiki.jikexueyuan.com/project/android-weekly/" target="_blank" rel="external">http://wiki.jikexueyuan.com/project/android-weekly/</a></li>
+<li><strong>Material Design</strong>： <a href="https://material.google.com/" target="_blank" rel="external">https://material.google.com/</a><br><strong>中文版</strong>：<a href="http://wiki.jikexueyuan.com/project/material-design/" target="_blank" rel="external">http://wiki.jikexueyuan.com/project/material-design/</a></li>
+<li><strong>极客学院 Wiki Android板块</strong>：<a href="http://wiki.jikexueyuan.com/list/android/" target="_blank" rel="external">http://wiki.jikexueyuan.com/list/android/</a></li>
+<li><strong>Gradle Android Plugin</strong>：<a href="http://tools.android.com/tech-docs/new-build-system/user-guide" target="_blank" rel="external">http://tools.android.com/tech-docs/new-build-system/user-guide</a><br><strong>中文版</strong>：<a href="https://chaosleong.gitbooks.io/gradle-for-android/content/" target="_blank" rel="external">https://chaosleong.gitbooks.io/gradle-for-android/content/</a><br><a href="http://avatarqing.github.io/Gradle-Plugin-User-Guide-Chinese-Verision/" target="_blank" rel="external">http://avatarqing.github.io/Gradle-Plugin-User-Guide-Chinese-Verision/</a></li>
+<li><strong>Google官方性能优化</strong>(GDG中译版)：<a href="http://chinagdg.org/google-videos/" target="_blank" rel="external">http://chinagdg.org/google-videos/</a></li>
+<li><strong>NewCircle Training</strong>(YouTube视频)：<a href="https://www.youtube.com/user/MarakanaTechTV/featured" target="_blank" rel="external">https://www.youtube.com/user/MarakanaTechTV/featured</a></li>
+<li><strong>Android Digest</strong>：<a href="https://www.androiddevdigest.com/" target="_blank" rel="external">https://www.androiddevdigest.com/</a></li>
+<li><strong>Android Performance Patterns</strong>(YouTube视频)：<br><a href="https://www.youtube.com/playlist?list=PLWz5rJ2EKKc9CBxr3BVjPTPoDPLdPIFCE" target="_blank" rel="external">https://www.youtube.com/playlist?list=PLWz5rJ2EKKc9CBxr3BVjPTPoDPLdPIFCE</a></li>
+<li><strong>CodePath Android Cliffnotes</strong>(Android学习笔记)：<a href="http://guides.codepath.com/android" target="_blank" rel="external">http://guides.codepath.com/android</a></li>
+<li><strong>免费编程中文书籍索引</strong>：<a href="https://github.com/justjavac/free-programming-books-zh_CN" target="_blank" rel="external">https://github.com/justjavac/free-programming-books-zh_CN</a></li>
+<li><strong>Java实现各种设计模式范例</strong>：<a href="https://github.com/iluwatar/java-design-patterns" target="_blank" rel="external">https://github.com/iluwatar/java-design-patterns</a><br>…</li>
+</ul>
+<hr>
+<h2 id="2-开源项目"><a href="#2-开源项目" class="headerlink" title="2.开源项目"></a>2.开源项目</h2><hr>
+<ul>
+<li><strong>Google Samples</strong>：<a href="https://github.com/googlesamples" target="_blank" rel="external">https://github.com/googlesamples</a></li>
+<li><strong>Android开源项目分类汇总</strong>：<a href="https://github.com/Trinea/android-open-project" target="_blank" rel="external">https://github.com/Trinea/android-open-project</a></li>
+<li><strong>GitHub Android Libraries Top 100</strong>：<br><a href="https://github.com/Freelander/Android_Data/blob/master/Android-Librarys-Top-100.md" target="_blank" rel="external">https://github.com/Freelander/Android_Data/blob/master/Android-Librarys-Top-100.md</a></li>
+<li><strong>codekk</strong>(开源项目，源码解析)：<a href="http://p.codekk.com/" target="_blank" rel="external">http://p.codekk.com/</a></li>
+<li><strong>最流行的android组件大全</strong>：<a href="http://colobu.com/2014/08/15/android-components-collection/" target="_blank" rel="external">http://colobu.com/2014/08/15/android-components-collection/</a></li>
+<li><strong>2015最流行的Android组件、工具、框架大全</strong>：<br><a href="http://www.open-open.com/lib/view/open1436262653692.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1436262653692.html</a></li>
+<li><strong>开源中国社区</strong>(开源项目)：<a href="http://www.oschina.net/project/tags" target="_blank" rel="external">http://www.oschina.net/project/tags</a></li>
+<li><strong>F-Droid</strong>(发布/看开源应用)：<a href="https://f-droid.org/" target="_blank" rel="external">https://f-droid.org/</a></li>
+<li><strong>gold-miner</strong>(掘金翻译计划)：<a href="https://github.com/xitu/gold-miner" target="_blank" rel="external">https://github.com/xitu/gold-miner</a></li>
+<li><strong>MobDevGroup</strong>(移动平台资源整理)：<a href="http://mobdevgroup.com/" target="_blank" rel="external">http://mobdevgroup.com/</a></li>
+<li><strong>AndroidLibs</strong>(Android开源代码大全)：<a href="https://github.com/XXApple/AndroidLibs" target="_blank" rel="external">https://github.com/XXApple/AndroidLibs</a></li>
+<li><strong>Android-arsenal</strong>(开源库分类):<a href="https://android-arsenal.com/demo" target="_blank" rel="external">https://android-arsenal.com/demo</a></li>
+<li><strong>Android Gems</strong>(开源库分类)：<a href="http://www.android-gems.com/category" target="_blank" rel="external">http://www.android-gems.com/category</a></li>
+<li><strong>awesome-android</strong>(各种库的分类整理)：<a href="https://snowdream.github.io/awesome-android/" target="_blank" rel="external">https://snowdream.github.io/awesome-android/</a></li>
+<li><strong>Square Open Source</strong>：<a href="http://square.github.io/#android" target="_blank" rel="external">http://square.github.io/#android</a></li>
+<li><strong>Android-Dev-Favorites</strong>(资源收集)：<a href="https://github.com/ruijun/Android-Dev-Favorites" target="_blank" rel="external">https://github.com/ruijun/Android-Dev-Favorites</a></li>
+<li><strong>Android-tech-frontier</strong>(翻译国外文章)：<a href="https://github.com/hehonghui/android-tech-frontier/wiki" target="_blank" rel="external">https://github.com/hehonghui/android-tech-frontier/wiki</a><br>…</li>
+</ul>
+<hr>
+<h2 id="3-编码规范-项目协作"><a href="#3-编码规范-项目协作" class="headerlink" title="3.编码规范/项目协作"></a>3.编码规范/项目协作</h2><hr>
+<ul>
+<li><strong>Google Java编程风格指南</strong>：<a href="http://www.hawstein.com/posts/google-java-style.html" target="_blank" rel="external">http://www.hawstein.com/posts/google-java-style.html</a></li>
+<li><strong>Google 官方 Android 编码风格规范</strong>：<a href="http://www.360sdn.com/2013/android_0517/144.html" target="_blank" rel="external">http://www.360sdn.com/2013/android_0517/144.html</a></li>
+<li><strong>最全面的 Android 编码规范指南</strong>：<a href="https://www.sdk.cn/news/3137" target="_blank" rel="external">https://www.sdk.cn/news/3137</a></li>
+<li><strong>Pro Git(官方)</strong>：<a href="https://git-scm.com/book/zh/v2" target="_blank" rel="external">https://git-scm.com/book/zh/v2</a></li>
+<li><strong>Pro Git(oschina)</strong>：<a href="http://git.oschina.net/progit/index.html" target="_blank" rel="external">http://git.oschina.net/progit/index.html</a></li>
+<li><strong>Git大法好</strong>：<a href="http://www.jianshu.com/notebooks/3400366/latest" target="_blank" rel="external">http://www.jianshu.com/notebooks/3400366/latest</a></li>
+<li><strong>廖雪峰Git教程</strong>：<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a></li>
+<li><strong>学习，使用 git 过程中做的思维导图</strong>：<a href="https://ruby-china.org/topics/17590" target="_blank" rel="external">https://ruby-china.org/topics/17590</a></li>
+<li><strong>基于Repo和Git的版本管理</strong>：<a href="http://blog.csdn.net/ocean2006/article/details/6422952" target="_blank" rel="external">http://blog.csdn.net/ocean2006/article/details/6422952</a></li>
+<li><strong>四种常见 Git 工作流比较</strong>：<a href="http://www.cnblogs.com/itech/p/5188929.html" target="_blank" rel="external">http://www.cnblogs.com/itech/p/5188929.html</a></li>
+<li><strong>git-recipes</strong>：<a href="https://github.com/geeeeeeeeek/git-recipes/wiki" target="_blank" rel="external">https://github.com/geeeeeeeeek/git-recipes/wiki</a><br>…</li>
+</ul>
+<hr>
+<h2 id="4-网络期刊"><a href="#4-网络期刊" class="headerlink" title="4.网络期刊"></a>4.网络期刊</h2><hr>
+<ul>
+<li><strong>开发技术前线</strong>：<a href="http://www.devtf.cn/" target="_blank" rel="external">http://www.devtf.cn/</a></li>
+<li><strong>APP开发日报</strong>：<a href="http://app.memect.com/" target="_blank" rel="external">http://app.memect.com/</a></li>
+<li><strong>GDG社区博客</strong>：<a href="http://chinagdg.org/blog/" target="_blank" rel="external">http://chinagdg.org/blog/</a></li>
+<li><strong>Android Blog 周刊</strong>：<a href="http://androidblog.cn/index.php/Index" target="_blank" rel="external">http://androidblog.cn/index.php/Index</a></li>
+<li><strong>Android开发技术周报</strong>(脉脉不得语)：<a href="http://www.androidweekly.cn/" target="_blank" rel="external">http://www.androidweekly.cn/</a></li>
+<li><strong>干活集中营</strong>：<a href="http://gank.io/" target="_blank" rel="external">http://gank.io/</a></li>
+<li><strong>稀土掘金</strong>：<a href="http://gold.xitu.io/explore/android" target="_blank" rel="external">http://gold.xitu.io/explore/android</a></li>
+<li><strong>平安金融科技移动开发周报</strong>：<a href="https://github.com/PaicHyperionDev/MobileDevWeekly" target="_blank" rel="external">https://github.com/PaicHyperionDev/MobileDevWeekly</a></li>
+<li><strong>【Bus Weekly】专题集合每周精选推</strong>：<a href="http://www.apkbus.com/search.php?searchsubmit=yes" target="_blank" rel="external">http://www.apkbus.com/search.php?searchsubmit=yes</a></li>
+<li><strong>Relam新闻</strong>：<a href="https://realm.io/cn/news/" target="_blank" rel="external">https://realm.io/cn/news/</a></li>
+<li><strong>Android开发总览</strong>：<a href="http://www.nowamagic.net/academy/part/50/115/" target="_blank" rel="external">http://www.nowamagic.net/academy/part/50/115/</a></li>
+<li><strong>技术学习小组</strong>：<a href="http://blog.qiji.tech/" target="_blank" rel="external">http://blog.qiji.tech/</a></li>
+<li><strong>泡在网上的日子</strong>：<a href="http://www.jcodecraeer.com/" target="_blank" rel="external">http://www.jcodecraeer.com/</a></li>
+<li><strong>技术简报订阅</strong>：<a href="http://memect.com/" target="_blank" rel="external">http://memect.com/</a></li>
+<li><strong>InfoQ</strong>：<a href="http://www.infoq.com/cn/mobile/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk" target="_blank" rel="external">http://www.infoq.com/cn/mobile/</a></li>
+<li><strong>《Android经验分享》周刊</strong>：<a href="http://www.jianshu.com/p/0ad44d77be20" target="_blank" rel="external">http://www.jianshu.com/p/0ad44d77be20</a></li>
+<li><strong>开发者头条</strong>：<a href="http://toutiao.io/" target="_blank" rel="external">http://toutiao.io/</a></li>
+<li><strong>深度开源</strong>：<a href="http://www.open-open.com/lib/" target="_blank" rel="external">http://www.open-open.com/lib/</a></li>
+<li><strong>Android学习网</strong>：<a href="http://android-study.com/" target="_blank" rel="external">http://android-study.com/</a></li>
+<li><strong>爱编程</strong>：<a href="http://www.w2bc.com/" target="_blank" rel="external">http://www.w2bc.com/</a></li>
+<li><strong>Android100</strong>：<a href="http://www.android100.org/" target="_blank" rel="external">http://www.android100.org/</a></li>
+<li><strong>Android开发网</strong>：<a href="http://www.jizhuomi.com/android/" target="_blank" rel="external">http://www.jizhuomi.com/android/</a><br>…</li>
+</ul>
+<hr>
+<h2 id="5-技术社区"><a href="#5-技术社区" class="headerlink" title="5.技术社区"></a>5.技术社区</h2><hr>
+<ul>
+<li><strong>StackOverFlow</strong>：<a href="http://stackoverflow.com/questions/tagged/android" target="_blank" rel="external">http://stackoverflow.com/questions/tagged/android</a></li>
+<li><strong>Antonioleiva</strong>(国外Android技术分享网站)：<a href="http://antonioleiva.com/" target="_blank" rel="external">http://antonioleiva.com/</a></li>
+<li><strong>segmentfault</strong>：<a href="https://segmentfault.com/t/android" target="_blank" rel="external">https://segmentfault.com/t/android</a></li>
+<li><strong>Bugly社区</strong>：<a href="http://bugly.qq.com/bbs/portal.php" target="_blank" rel="external">http://bugly.qq.com/bbs/portal.php</a></li>
+<li><strong>WeTest(腾讯质量开放平台)</strong>：<a href="http://wetest.qq.com/lab/" target="_blank" rel="external">http://wetest.qq.com/lab/</a></li>
+<li><strong>V2EX</strong>：<a href="https://www.v2ex.com/go/android" target="_blank" rel="external">https://www.v2ex.com/go/android</a></li>
+<li><strong>伯乐在线</strong>：<a href="http://android.jobbole.com/category/tech-share/" target="_blank" rel="external">http://android.jobbole.com/category/tech-share/</a></li>
+<li><strong>美团点评技术团队</strong>：<a href="http://memect.com/" target="_blank" rel="external">http://memect.com/</a></li>
+<li><strong>腾讯AlloyTeam Blog</strong>：<a href="http://www.alloyteam.com/mobiledevelop/android/" target="_blank" rel="external">http://www.alloyteam.com/mobiledevelop/android/</a></li>
+<li><strong>ImportNew</strong>：<a href="http://www.importnew.com/" target="_blank" rel="external">http://www.importnew.com/</a></li>
+<li><strong>蘑菇街技术博客</strong>：<a href="http://mogu.io/" target="_blank" rel="external">http://mogu.io/</a></li>
+<li><strong>DiyCode</strong>(高端交流分享社区)：<a href="http://www.diycode.cc/" target="_blank" rel="external">http://www.diycode.cc/</a></li>
+<li><strong>天码营</strong>：<a href="http://www.tianmaying.com/topics" target="_blank" rel="external">http://www.tianmaying.com/topics</a></li>
+<li><strong>淘宝前端团队(FED)</strong><a href="http://taobaofed.org/" target="_blank" rel="external">http://taobaofed.org/</a></li>
+<li><strong>上海GDG论坛</strong>(Shanghai GDG Forum)：<a href="http://www.chinagdg.com/forum-36-1.html" target="_blank" rel="external">http://www.chinagdg.com/forum-36-1.html</a></li>
+<li><strong>酷粒</strong>：<a href="http://coollist.cn/" target="_blank" rel="external">http://coollist.cn/</a></li>
+<li><strong>IBM developerWorks</strong>：<a href="http://www.ibm.com/developerworks/cn/" target="_blank" rel="external">http://www.ibm.com/developerworks/cn/</a></li>
+<li><strong>阿里技术沙龙</strong>：<a href="http://club.alibabatech.org/" target="_blank" rel="external">http://club.alibabatech.org/</a></li>
+<li><strong>利器社群</strong>：<a href="http://memect.com/" target="_blank" rel="external">http://liqi.io/community/</a></li>
+<li><strong>褪墨・时间管理</strong>：<a href="http://www.mifengtd.cn/articles/" target="_blank" rel="external">http://www.mifengtd.cn/articles/</a><br>…</li>
+</ul>
+<hr>
+<h2 id="6-开发资源"><a href="#6-开发资源" class="headerlink" title="6.开发资源"></a>6.开发资源</h2><hr>
+<h3 id="工具-Demo-Library"><a href="#工具-Demo-Library" class="headerlink" title="工具/Demo/Library"></a>工具/Demo/Library</h3><ul>
+<li><strong>AndroidDevTools</strong>(开发相关工具下载)：<a href="http://www.androiddevtools.cn/" target="_blank" rel="external">http://www.androiddevtools.cn/</a><br><strong>Github地址</strong>：<a href="https://github.com/inferjay/AndroidDevTools/" target="_blank" rel="external">https://github.com/inferjay/AndroidDevTools/</a></li>
+<li><strong>23code</strong>(经典源码分享)：<a href="http://www.23code.com/" target="_blank" rel="external">http://www.23code.com/</a></li>
+<li><strong>Code4App</strong>(iOS源码分享)<a href="http://code4app.com/" target="_blank" rel="external">http://code4app.com/</a></li>
+<li><strong>appance.com</strong>：(各种源码不止Android)<a href="http://www.appance.com/" target="_blank" rel="external">http://www.appance.com/</a></li>
+<li><strong>安卓资源库列表</strong>：<a href="http://guides.codepath.com/android" target="_blank" rel="external">http://guides.codepath.com/android</a></li>
+<li><strong>IT蓝豹</strong>(demo)：<a href="http://itlanbao.com/" target="_blank" rel="external">http://itlanbao.com/</a></li>
+<li><strong>看源社区</strong>(demo)：<a href="http://www.see-source.com/" target="_blank" rel="external">http://www.see-source.com/</a></li>
+<li><a href="http://app.memect.com/doc/android.html" target="_blank" rel="external">http://app.memect.com/doc/android.html</a></li>
+<li><strong>Coolgithubprojects</strong>(Github上的开源项目)：<a href="https://se.reddit.com/r/coolgithubprojects/" target="_blank" rel="external">https://se.reddit.com/r/coolgithubprojects</a></li>
+<li><strong>AndroidCat</strong>(分类的网站书签)：<a href="http://androidcat.com/?step=1&amp;view=CatFragment" target="_blank" rel="external">http://androidcat.com/?step=1&amp;view=CatFragment</a></li>
+<li><strong>App Code</strong>(源码)：<a href="http://appxcode.com/" target="_blank" rel="external">http://appxcode.com/</a></li>
+<li><strong>极分享</strong>：<a href="http://finalshares.com/" target="_blank" rel="external">http://finalshares.com/</a></li>
+<li><strong>A梦源码网</strong>：<a href="http://www.amsoft.cn/" target="_blank" rel="external">http://www.amsoft.cn/</a></li>
+<li><strong>阳和移动开发</strong>(开源库) <a href="http://www.mobile-open.com/" target="_blank" rel="external">http://www.mobile-open.com/</a></li>
+<li><strong>代码片段</strong>(代码粘贴复制)：<a href="http://www.phpxs.com/code/java/" target="_blank" rel="external">http://www.phpxs.com/code/java/</a></li>
+<li><strong>开发资源合集</strong>(素材等)：<a href="http://www.oschina.net/question/2285044_219206?fromerr=gEGePPMG" target="_blank" rel="external">http://www.oschina.net/question/2285044_219206?fromerr=gEGePPMG</a><br>…</li>
+</ul>
+<h3 id="常备工具网址"><a href="#常备工具网址" class="headerlink" title="常备工具网址"></a>常备工具网址</h3><ul>
+<li><strong>开源中国在线工具</strong>(乱七八糟什么都有)：<a href="http://tool.oschina.net/" target="_blank" rel="external">http://tool.oschina.net/</a></li>
+<li><strong>ATool</strong>(乱七八糟什么都有)：<a href="http://www.atool.org/" target="_blank" rel="external">http://www.atool.org/</a></li>
+<li><strong>贴XML自动生成findViewById</strong>：<a href="http://android.lineten.net/layout.php" target="_blank" rel="external">http://android.lineten.net/layout.php</a></li>
+<li><strong>Codota</strong>(代码搜索引擎，有插件版)：<a href="http://www.codota.com/" target="_blank" rel="external">http://www.codota.com/</a></li>
+<li><strong>APK在线反编译</strong>：<a href="http://www.decompileandroid.com/" target="_blank" rel="external">http://www.decompileandroid.com/</a></li>
+<li><strong>JAR包，class文件反编译</strong>：<a href="http://www.javadecompilers.com/" target="_blank" rel="external">http://www.javadecompilers.com/</a></li>
+<li><strong>直接下载GooglePlay的APK</strong>：<br><strong>APK Downloader</strong>(有插件版)：<a href="https://apps.evozi.com/apk-downloader/" target="_blank" rel="external">https://apps.evozi.com/apk-downloader/</a><br><strong>Apkpure</strong>：<a href="https://apkpure.com/" target="_blank" rel="external">https://apkpure.com/</a></li>
+<li><strong>代码在线运行</strong>(无广告，清爽)：<a href="http://tool.lu/coderunner/" target="_blank" rel="external">http://tool.lu/coderunner/</a></li>
+<li><strong>普通图标搜索</strong>：<strong>MYPNG</strong>：<a href="http://www.mypng.cn/" target="_blank" rel="external">http://www.mypng.cn/</a></li>
+<li><strong>Android Asset(矢量图) 图标</strong>：</li>
+<li><strong>IconFont</strong>(阿里巴巴矢量图标库)：<a href="http://www.iconfont.cn/" target="_blank" rel="external">http://www.iconfont.cn/</a><br><strong>IcoMoon</strong>：<a href="https://icomoon.io/app/#/select" target="_blank" rel="external">https://icomoon.io/app/#/select</a><br><strong>FlatIcon</strong>：<a href="http://www.flaticon.com/" target="_blank" rel="external">http://www.flaticon.com/</a><br><strong>AndroidAssetStudio</strong>：<a href="http://romannurik.github.io/AndroidAssetStudio/index.html" target="_blank" rel="external">http://romannurik.github.io/AndroidAssetStudio/index.html</a></li>
+<li><strong>Json校验解析等</strong>：<a href="http://www.bejson.com/" target="_blank" rel="external">http://www.bejson.com/</a><br><a href="http://www.kjson.com/jsoneditor/" target="_blank" rel="external">http://www.kjson.com/jsoneditor/</a></li>
+<li><strong>RGB颜色查询对照表</strong>：<a href="http://www.114la.com/other/rgb.htm" target="_blank" rel="external">http://www.114la.com/other/rgb.htm</a></li>
+<li><strong>在线获取颜色值</strong>：<a href="http://colorpickernow.com/" target="_blank" rel="external">http://colorpickernow.com/</a><br><a href="http://www.colorspire.com/rgb-color-wheel/" target="_blank" rel="external">http://www.colorspire.com/rgb-color-wheel/</a></li>
+<li><strong>在线模拟贝塞尔曲线</strong>：<a href="https://myst729.github.io/bezier-curve/" target="_blank" rel="external">https://myst729.github.io/bezier-curve/</a></li>
+<li><strong>文件内容差异比较</strong>：<a href="https://www.diffchecker.com/" target="_blank" rel="external">https://www.diffchecker.com/</a></li>
+<li><strong>在线视频编辑工具</strong>：<a href="http://online-video-cutter.com/" target="_blank" rel="external">http://online-video-cutter.com/</a></li>
+<li><strong>Markdown在线编辑工具</strong>：<a href="http://mdp.tylingsoft.com/" target="_blank" rel="external">http://mdp.tylingsoft.com/</a></li>
+<li><strong>Emojione</strong>(emoji表情查找下载)：<a href="http://emojione.com/" target="_blank" rel="external">http://emojione.com/</a></li>
+<li><strong>Emoji表情的Unicode编码表</strong>：<a href="http://apps.timwhitlock.info/emoji/tables/unicode" target="_blank" rel="external">http://apps.timwhitlock.info/emoji/tables/unicode</a></li>
+<li><strong>天朝城市列表</strong>(城市代码)：<a href="https://github.com/ruixingchen/ChinaCityList/blob/master/ChinaCityList.json" target="_blank" rel="external">https://github.com/ruixingchen/ChinaCityList/blob/master/ChinaCityList.json</a></li>
+<li><strong>正则表达式测试</strong>：<a href="https://regex101.com/" target="_blank" rel="external">https://regex101.com/</a></li>
+<li><strong>SmallPDF</strong>(各种PDF操作/功能)：<a href="https://smallpdf.com/cn" target="_blank" rel="external">https://smallpdf.com/cn</a></li>
+<li><strong>Material Design 调色板</strong>：<a href="https://www.materialpalette.com/" target="_blank" rel="external">https://www.materialpalette.com/</a></li>
+<li><strong>Material Disign 颜色值</strong>：<a href="https://gist.github.com/daniellevass/b0b8cfa773488e138037" target="_blank" rel="external">https://gist.github.com/daniellevass/b0b8cfa773488e138037</a></li>
+<li><strong>ActionBar Style生成器</strong>：<a href="http://jgilfelt.github.io/android-actionbarstylegenerator/" target="_blank" rel="external">http://jgilfelt.github.io/android-actionbarstylegenerator/</a></li>
+<li><strong>SVG转VectorDrawable</strong>：<a href="http://inloop.github.io/svg2android/" target="_blank" rel="external">http://inloop.github.io/svg2android/</a></li>
+<li><strong>在线.9图制作</strong>：<a href="http://romannurik.github.io/AndroidAssetStudio/nine-patches.html" target="_blank" rel="external">http://romannurik.github.io/AndroidAssetStudio/nine-patches.html</a></li>
+<li><strong>在线不同颜色风格的控件</strong>：<a href="http://android-holo-colors.com/" target="_blank" rel="external">http://android-holo-colors.com/</a></li>
+<li><strong>px，dp，sp，pt 转换相关</strong>：<br><a href="http://labs.rampinteractive.co.uk/android_dp_px_calculator/" target="_blank" rel="external">http://labs.rampinteractive.co.uk/android_dp_px_calculator/</a><br><a href="http://angrytools.com/android/pixelcalc/" target="_blank" rel="external">http://angrytools.com/android/pixelcalc/</a><br><a href="http://pixplicity.com/dp-px-converter/" target="_blank" rel="external">http://pixplicity.com/dp-px-converter/</a></li>
+<li><strong>Grepcode</strong>(源码搜索引擎)：<a href="http://grepcode.com/search/?query=google%20android&amp;entity=project" target="_blank" rel="external">http://grepcode.com/search/?query=google+android&amp;entity=project</a></li>
+<li><strong>十进制与十六进制互转</strong>：<a href="http://www.binaryhexconverter.com/decimal-to-hex-converter" target="_blank" rel="external">http://www.binaryhexconverter.com/decimal-to-hex-converter</a></li>
+<li><strong>APIStore</strong>(收录各种日常API)：<a href="http://apistore.baidu.com/" target="_blank" rel="external">http://apistore.baidu.com/</a></li>
+<li><strong>在线绘制UML</strong>(国外，有些慢，不过UI蛮好看的)：<a href="https://cacoo.com/getstarted/" target="_blank" rel="external">https://cacoo.com/getstarted/</a></li>
+<li><strong>ProcessOn</strong>(国内，支持多种图，还不错)：<a href="https://www.processon.com/" target="_blank" rel="external">https://www.processon.com/</a></li>
+<li><strong>马克鳗</strong>(标注测量工具)：<a href="http://www.getmarkman.com/" target="_blank" rel="external">http://www.getmarkman.com/</a><br><strong>PxCook像素大厨</strong>(UI设计利器)：<a href="http://www.fancynode.com.cn/" target="_blank" rel="external">http://www.fancynode.com.cn/</a><br>…</li>
+</ul>
+<h3 id="Android-Studio-插件"><a href="#Android-Studio-插件" class="headerlink" title="Android Studio 插件"></a>Android Studio 插件</h3><p>——以下内容摘自：<a href="https://ydmmocoo.github.io/2016/06/28/Android-Studio%E6%8F%92%E4%BB%B6%E6%95%B4%E7%90%86/" target="_blank" rel="external">习惯沉默的Blog——Android Studio插件整理</a>，只贴概述，效果自行到博客查看。</p>
+<ul>
+<li><strong>GsonFormat</strong>：Json直接转成Java Bean，Alt+Insert选择GsonFormat即可。</li>
+<li><strong>Android ButterKnife Zelezny</strong>：在Activity，Fragment，Adapter中选中xml自动生成ButterKnife注解。</li>
+<li><strong>Android Code Generator</strong>：根据布局文件快速生成Activity，Fragment，Adapter，Menu。</li>
+<li><strong>BorePlugin</strong>：根据布局自动生成findViewById，onClick等代码。</li>
+<li><strong>Android Parcelable code generator</strong>：JavaBean序列化，快速实现Parcelable接口。</li>
+<li><strong>GenerateSerialVersionUID</strong>：实现Serializable序列化Bean。</li>
+<li><strong>Android Methods Count</strong>：显示依赖库中的方法数(Android 65k，你懂的)。</li>
+<li><strong>Lifecycle Sorter</strong>：让Activity或Fragment里重写的生命周期方法按生命周期的先后顺序排序。</li>
+<li><strong>CodeGlance</strong>：代码预览，快速定位，Sublime Text右侧那种代码缩略图。</li>
+<li><strong>ADB WIFI</strong>，<strong>AndroidWiFiADB</strong>：wifi无线调试APP。</li>
+<li><strong>AndroidPixelDimenGenerator</strong>：自动生成dimen.xml文件插件。</li>
+<li><strong>JsonOnlineViewer</strong>：请求调试后台接口用。</li>
+<li><strong>Android Styler</strong>：根据xml自动生成style代码，选中View/ViewGroup，Ctrl+shift+D。</li>
+<li><strong>Android Drawable Importer</strong>：支持多源批量导入图片的插件。</li>
+<li><strong>SelectorChapek for Android</strong>：根据资源文件命名自动生成Selector文件。</li>
+<li><strong>Android Holo Colors Generator</strong>：通过自定义Holo主题颜色生成对应的Drawable和布局文件。</li>
+<li><strong>GradleDependenciesHelperPlugin</strong>：maven gradle 依赖支持自动补全。</li>
+<li><strong>RemoveButterKnife</strong>：将ButterKnife回复findViewById。</li>
+<li><strong>AndroidProguardPlugin</strong>：一键生成项目混淆代码。</li>
+<li><strong>otto-intellij-plugin</strong>：otto事件导航工具。</li>
+<li><strong>eventbus-intellij-plugin</strong>：EventBus导航工具。</li>
+<li><strong>Dagger-intellij-plugin</strong>：dagger可视化辅助工具。</li>
+<li><strong>idea-markdown</strong>，<strong>Markdown Navigator</strong>：Markdown插件。</li>
+<li><strong>Sexy Editor</strong>：设置AS背景图。</li>
+<li><strong>folding-plugin</strong>：布局文件分组。</li>
+<li><strong>Android-DPI-Calculator</strong>：DPI计算插件。</li>
+<li><strong>Android Studio Prettify</strong>：将代码中的字符串写在String.xml中。</li>
+<li><strong>Material Theme UI</strong>：为AS设置Material主题的插件。</li>
+<li><strong>.ignore</strong>：自动生成模板.gitignore+自动补全。</li>
+<li><strong>ECTranslation</strong>：画词翻译插件。</li>
+<li><strong>TranslationPlugin</strong>：翻译插件。</li>
+<li><strong>PermissionsDispatcher plugin</strong>：自动生成6.0权限的代码。</li>
+<li><strong>WakaTime</strong>：记录你在IDE上的工作时间。</li>
+<li><strong>AndroidLocalizationer</strong>：将string资源自动翻译成其他语言。</li>
+<li><strong>SingletonTest</strong>：快速生成单例模式。</li>
+<li><strong>LayoutFormatter</strong>：Drakeet 开发一个一键格式化你的XML文件的插件。</li>
+<li><strong>android-strings-search-plugin</strong>：一个可以通过输入文字找到strings.xml资源的插件。</li>
+<li><strong>Statistic</strong>:文件行数统计</li>
+<li><strong>代码配色</strong>：<a href="http://color-themes.com/?view=index" target="_blank" rel="external">http://color-themes.com/?view=index</a></li>
+</ul>
+<p>…如需查看更多可见：<a href="http://mobdevgroup.com/tools/android" target="_blank" rel="external">http://mobdevgroup.com/tools/android</a></p>
+<h3 id="Chrome插件"><a href="#Chrome插件" class="headerlink" title="Chrome插件"></a>Chrome插件</h3><ul>
+<li><strong>Android SDK Search插件</strong>(直接在官方文档看源码)：<br><a href="https://chrome.google.com/webstore/detail/android-sdk-search/hgcbffeicehlpmgmnhnkjbjoldkfhoin" target="_blank" rel="external">https://chrome.google.com/webstore/detail/android-sdk-search/hgcbffeicehlpmgmnhnkjbjoldkfhoin</a></li>
+<li>后面补齐…</li>
+</ul>
+<hr>
+<h2 id="7-知-逼-乎专栏"><a href="#7-知-逼-乎专栏" class="headerlink" title="7.知(逼)乎专栏"></a>7.知(逼)乎专栏</h2><hr>
+<ul>
+<li><strong>Android 科学院</strong>：<a href="https://zhuanlan.zhihu.com/andlib" target="_blank" rel="external">https://zhuanlan.zhihu.com/andlib</a></li>
+<li><strong>安卓同学</strong>：<a href="https://zhuanlan.zhihu.com/androidmate" target="_blank" rel="external">https://zhuanlan.zhihu.com/androidmate</a></li>
+<li><strong>中二病也要开发ANDROID</strong>：<a href="https://zhuanlan.zhihu.com/kaede" target="_blank" rel="external">https://zhuanlan.zhihu.com/kaede</a></li>
+<li><strong>『Android 还可以这样开发』</strong>：<a href="https://zhuanlan.zhihu.com/kotandroid" target="_blank" rel="external">https://zhuanlan.zhihu.com/kotandroid</a></li>
+<li><strong>AndroidDeveloper</strong>：<a href="https://zhuanlan.zhihu.com/stormzhang" target="_blank" rel="external">https://zhuanlan.zhihu.com/stormzhang</a></li>
+<li><strong>张明云的知识共享</strong>：<a href="https://zhuanlan.zhihu.com/zmywly8866" target="_blank" rel="external">https://zhuanlan.zhihu.com/zmywly8866</a><br>…</li>
+</ul>
+<hr>
+<h2 id="8-简书专题"><a href="#8-简书专题" class="headerlink" title="8.简书专题"></a>8.简书专题</h2><hr>
+<ul>
+<li><strong>Android Dev</strong>(Tikitoo)：<a href="http://www.jianshu.com/collection/6e31b7354a48" target="_blank" rel="external">http://www.jianshu.com/collection/6e31b7354a48</a></li>
+<li><strong>Android开发经验谈</strong>(张明云)：<a href="http://www.jianshu.com/collection/5139d555c94d" target="_blank" rel="external">http://www.jianshu.com/collection/5139d555c94d</a></li>
+<li><strong>Android知识</strong>(码农明明桑)：<a href="http://www.jianshu.com/collection/3fde3b545a35" target="_blank" rel="external">http://www.jianshu.com/collection/3fde3b545a35</a><br>…</li>
+</ul>
+<hr>
+<h2 id="9-公众号"><a href="#9-公众号" class="headerlink" title="9.公众号"></a>9.公众号</h2><hr>
+<p>后面补上…</p>
+<hr>
+<h2 id="10-视频教程"><a href="#10-视频教程" class="headerlink" title="10.视频教程"></a>10.视频教程</h2><hr>
+<ul>
+<li><strong>慕课网</strong>：<a href="http://www.imooc.com/course/list?c=android" target="_blank" rel="external">http://www.imooc.com/course/list?c=android</a></li>
+<li><strong>极客学院</strong>：<a href="http://www.jikexueyuan.com/course/android/" target="_blank" rel="external">http://www.jikexueyuan.com/course/android/</a></li>
+<li><strong>麦子学院</strong>：<a href="http://www.maiziedu.com/course/android/" target="_blank" rel="external">http://www.maiziedu.com/course/android/</a></li>
+<li><strong>Mars Android开发视频教程</strong>：<a href="http://mars.apkbus.com/" target="_blank" rel="external">http://mars.apkbus.com/</a></li>
+<li><strong>老罗 Android开发视频教程</strong>：<a href="http://luo.apkbus.com/" target="_blank" rel="external">http://luo.apkbus.com/</a></li>
+<li><strong>Udacity android courses</strong>：<a href="https://www.udacity.com/courses/android" target="_blank" rel="external">https://www.udacity.com/courses/android</a></li>
+<li><strong>腾讯大讲堂讲座视频</strong>：<a href="http://djt.qq.com/videos/" target="_blank" rel="external">http://djt.qq.com/videos/</a><br>…</li>
+</ul>
+<hr>
+<h2 id="11-面试相关"><a href="#11-面试相关" class="headerlink" title="11.面试相关"></a>11.面试相关</h2><hr>
+<ul>
+<li><strong>牛客网</strong>：<a href="https://www.nowcoder.com/" target="_blank" rel="external">https://www.nowcoder.com/</a></li>
+<li><strong>LearningNotes</strong>(面试方方面面)：<a href="https://github.com/GeniusVJR/LearningNotes" target="_blank" rel="external">https://github.com/GeniusVJR/LearningNotes</a></li>
+<li><strong>skillgun</strong>(选择题，英语)：<a href="http://skillgun.com/android/interview-questions-and-answers" target="_blank" rel="external">http://skillgun.com/android/interview-questions-and-answers</a></li>
+<li><strong>android-discuss</strong>(Android问题交流坛)：<a href="https://github.com/android-cn/android-discuss" target="_blank" rel="external">https://github.com/android-cn/android-discuss</a></li>
+<li><strong>《Android 开发工程师面试指南》</strong>：<a href="http://www.diycode.cc/wiki/androidinterview" target="_blank" rel="external">http://www.diycode.cc/wiki/androidinterview</a></li>
+<li><strong>Android工程师面试题大全</strong>：<br><a href="http://blog.csdn.net/mc_hust/article/details/49517915" target="_blank" rel="external">http://blog.csdn.net/mc_hust/article/details/49517915</a><br><a href="http://www.jianshu.com/p/1bdf7d0e1ac5" target="_blank" rel="external">http://www.jianshu.com/p/1bdf7d0e1ac5</a></li>
+<li><strong>[干货]快速了解Android重要机制</strong>：<a href="http://www.jianshu.com/p/5f6d79323923" target="_blank" rel="external">http://www.jianshu.com/p/5f6d79323923</a></li>
+<li><strong>BAT|无线工程师面试流程详细解析</strong>：<a href="http://www.jianshu.com/p/f0d2ed1254a9" target="_blank" rel="external">http://www.jianshu.com/p/f0d2ed1254a9</a><br>…</li>
+</ul>
+<hr>
+<h2 id="12-精美APP观摩-推广-评测-软文"><a href="#12-精美APP观摩-推广-评测-软文" class="headerlink" title="12.精美APP观摩(推广)/评测/软文"></a>12.精美APP观摩(推广)/评测/软文</h2><ul>
+<li><strong>豌豆荚设计奖</strong>：<a href="http://www.wandoujia.com/award" target="_blank" rel="external">http://www.wandoujia.com/award</a></li>
+<li><strong>最美应用</strong>：<a href="http://zuimeia.com/?platform=2" target="_blank" rel="external">http://zuimeia.com/?platform=2</a></li>
+<li><strong>少数派</strong>：<a href="http://sspai.com/tag/android?t=%E5%BA%94%E7%94%A8" target="_blank" rel="external">http://sspai.com</a></li>
+<li><strong>爱应用</strong>：<a href="http://www.iapps.im/" target="_blank" rel="external">http://www.iapps.im/</a></li>
+<li><strong>爱屁屁</strong>：<a href="http://www.appnz.com/" target="_blank" rel="external">http://www.appnz.com/</a></li>
+<li><strong>数字尾巴</strong>：<a href="http://www.dgtle.com/" target="_blank" rel="external">http://www.dgtle.com/</a></li>
+<li><strong>氪TV</strong>：<a href="http://tv.36kr.com/" target="_blank" rel="external">http://tv.36kr.com/</a></li>
+<li><p><strong>ifanr 爱范儿</strong>：<a href="http://www.ifanr.com/" target="_blank" rel="external">http://www.ifanr.com/</a><br>…</p>
+<p>  <strong>文章</strong>：</p>
+</li>
+<li><strong>移动端的app应用推广流程以及优化的注意事项</strong>：<br><a href="http://www.wtoutiao.com/p/1d7t60h.html" target="_blank" rel="external">http://www.wtoutiao.com/p/1d7t60h.html</a></li>
+<li><strong>APP初期上线，有哪些比较靠谱的推广渠道、方式？</strong><br><a href="https://www.zhihu.com/question/27539055#answer-22840481" target="_blank" rel="external">https://www.zhihu.com/question/27539055#answer-22840481</a></li>
+</ul>
+<hr>
+<h2 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h2><p>本文内容摘取自下述站点(参考较多，有遗漏的欢迎提出)：</p>
+<blockquote>
+<ul>
+<li><a href="http://androidcat.com/" target="_blank" rel="external">http://androidcat.com/</a></li>
+<li><a href="https://github.com/zmywly8866/Worth-Reading-the-Android-technical-articles/blob/master/Android%E4%BC%98%E8%B4%A8%E6%8A%80%E6%9C%AF%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86.md" target="_blank" rel="external">https://github.com/zmywly8866/Worth-Reading-the-Android-technical-articles/blob/master/Android%E4%BC%98%E8%B4%A8%E6%8A%80%E6%9C%AF%E8%B5%84%E6%BA%90%E5%90%88%E9%9B%86.md</a></li>
+<li><a href="http://androidblog.cn/tools/#clean" target="_blank" rel="external">http://androidblog.cn/tools/#clean</a></li>
+<li><a href="https://github.com/zhujun2730/Android-Learning-Resources" target="_blank" rel="external">https://github.com/zhujun2730/Android-Learning-Resources</a></li>
+</ul>
+</blockquote>
+<hr>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/StorageBox/">StorageBox</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/StorageBox/">StorageBox</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2016/09/05/Android-Resources-Hodgepodge(Android资源大杂烩)/" data-title="Android开发学习相关整理 | CoderPig的小世界" data-tsina="3263534374" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/09/05/Android-Resources-Hodgepodge(Android资源大杂烩)/" data-title="Android开发学习相关整理" data-url="http://yoursite.com/2016/09/05/Android-Resources-Hodgepodge(Android资源大杂烩)/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Android-Resources-Hodgepodge-Android资源大杂烩"><span class="toc-number">1.</span> <span class="toc-text">Android-Resources-Hodgepodge(Android资源大杂烩)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-教程-文档"><span class="toc-number">1.1.</span> <span class="toc-text">1.教程/文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-开源项目"><span class="toc-number">1.2.</span> <span class="toc-text">2.开源项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-编码规范-项目协作"><span class="toc-number">1.3.</span> <span class="toc-text">3.编码规范/项目协作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-网络期刊"><span class="toc-number">1.4.</span> <span class="toc-text">4.网络期刊</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-技术社区"><span class="toc-number">1.5.</span> <span class="toc-text">5.技术社区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-开发资源"><span class="toc-number">1.6.</span> <span class="toc-text">6.开发资源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#工具-Demo-Library"><span class="toc-number">1.6.1.</span> <span class="toc-text">工具/Demo/Library</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常备工具网址"><span class="toc-number">1.6.2.</span> <span class="toc-text">常备工具网址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-Studio-插件"><span class="toc-number">1.6.3.</span> <span class="toc-text">Android Studio 插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chrome插件"><span class="toc-number">1.6.4.</span> <span class="toc-text">Chrome插件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-知-逼-乎专栏"><span class="toc-number">1.7.</span> <span class="toc-text">7.知(逼)乎专栏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-简书专题"><span class="toc-number">1.8.</span> <span class="toc-text">8.简书专题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-公众号"><span class="toc-number">1.9.</span> <span class="toc-text">9.公众号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-视频教程"><span class="toc-number">1.10.</span> <span class="toc-text">10.视频教程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-面试相关"><span class="toc-number">1.11.</span> <span class="toc-text">11.面试相关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-精美APP观摩-推广-评测-软文"><span class="toc-number">1.12.</span> <span class="toc-text">12.精美APP观摩(推广)/评测/软文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考网站"><span class="toc-number">1.13.</span> <span class="toc-text">参考网站</span></a></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/StorageBox/" title="StorageBox">StorageBox<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/StorageBox/" title="StorageBox">StorageBox<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://blog.csdn.net/coder_pig" target="_blank" title="CoderPig的猪栏">CoderPig的猪栏</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://anany.me/" target="_blank" title="Anany&#39;s blog">Anany&#39;s blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3263534374&verifier=90e33b2c&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello! I&#39;m CoderPig , a little Android developer. <br/>
+			This is my blog ,mark about my study and life.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/3263534374" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/https://github.com/coder-pig" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="http://www.zhihu.com/people/zhuang-pei-jie" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:779878443@qq.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="Coder-pig">Coder-pig</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"coder-pig"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?2a3c1a8464eb7c18c8470f7d78950692";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
