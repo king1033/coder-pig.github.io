@@ -1,0 +1,633 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>AndroidStudio-Eat-Guide—— 1.AS简介，下载安装与配置 | CoderPig的小世界</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Coder-pig">
+    
+
+    
+    <meta name="description" content="1.为何提倡使用AS而非使用Eclipse开发Android答：
+
+
+因为Google在2015年已经停止了Eclipse开发Android的支持，不再做相关的更新！官网已经不再提供下载链接了(当然有隐藏链接~)；
+Android Studio是Google亲儿子；
+基于IntelliJ IDEA，功能强大代码编辑器；
+基于Gradle构建系统等等…总之就是牛逼哄哄，如果你用熟了AS就不会想着回头">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AndroidStudio-Eat-Guide—— 1.AS简介，下载安装与配置">
+<meta property="og:url" content="http://yoursite.com/2016/09/14/AndroidStudio-Eat-Guide—— 1.AS简介，下载安装与配置/index.html">
+<meta property="og:site_name" content="CoderPig的小世界">
+<meta property="og:description" content="1.为何提倡使用AS而非使用Eclipse开发Android答：
+
+
+因为Google在2015年已经停止了Eclipse开发Android的支持，不再做相关的更新！官网已经不再提供下载链接了(当然有隐藏链接~)；
+Android Studio是Google亲儿子；
+基于IntelliJ IDEA，功能强大代码编辑器；
+基于Gradle构建系统等等…总之就是牛逼哄哄，如果你用熟了AS就不会想着回头">
+<meta property="og:image" content="http://static.zybuluo.com/coder-pig/jde0jbu0z61iav0rap2a2gqd/image_1asj7jsjp1f711v0uq8nic14vs9.png">
+<meta property="og:updated_time" content="2016-09-14T07:20:20.517Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AndroidStudio-Eat-Guide—— 1.AS简介，下载安装与配置">
+<meta name="twitter:description" content="1.为何提倡使用AS而非使用Eclipse开发Android答：
+
+
+因为Google在2015年已经停止了Eclipse开发Android的支持，不再做相关的更新！官网已经不再提供下载链接了(当然有隐藏链接~)；
+Android Studio是Google亲儿子；
+基于IntelliJ IDEA，功能强大代码编辑器；
+基于Gradle构建系统等等…总之就是牛逼哄哄，如果你用熟了AS就不会想着回头">
+<meta name="twitter:image" content="http://static.zybuluo.com/coder-pig/jde0jbu0z61iav0rap2a2gqd/image_1asj7jsjp1f711v0uq8nic14vs9.png">
+
+    
+    <link rel="alternative" href="/atom.xml" title="CoderPig的小世界" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/mouse_icon.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/mouse_icon.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/mouse_icon.png" alt="CoderPig的小世界" title="CoderPig的小世界"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="CoderPig的小世界">CoderPig的小世界</a></h1>
+				<h2 class="blog-motto">Before finding the right person, the only thing need to do is to make yourself good enough.</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/categories">分类</a></li>
+					
+						<li><a href="/tags">标签</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+						<form class="search" action="http://znsv.baidu.com/customer_search/" target="_blank">
+							<label>Search</label>
+						<input name="s" type="hidden" value= 10969979416646924000 ><input type="text" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/09/14/AndroidStudio-Eat-Guide—— 1.AS简介，下载安装与配置/" title="AndroidStudio-Eat-Guide—— 1.AS简介，下载安装与配置" itemprop="url">AndroidStudio-Eat-Guide—— 1.AS简介，下载安装与配置</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Coder-pig" target="_blank" itemprop="author">Coder-pig</a>
+		
+  <p class="article-time">
+    <time datetime="2016-09-14T07:19:29.051Z" itemprop="datePublished"> 发表于 2016-09-14</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-为何提倡使用AS而非使用Eclipse开发Android"><span class="toc-number">1.</span> <span class="toc-text">1.为何提倡使用AS而非使用Eclipse开发Android</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-AS有哪些优缺点？"><span class="toc-number">2.</span> <span class="toc-text">2.AS有哪些优缺点？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-下载安装Android-Studio"><span class="toc-number">3.</span> <span class="toc-text">3.下载安装Android Studio</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-1：安装JDK：先装JDK，不然你装好AS也是打不开的"><span class="toc-number">3.1.</span> <span class="toc-text">Step 1：安装JDK：先装JDK，不然你装好AS也是打不开的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-2：下载安装Android-Studio"><span class="toc-number">3.2.</span> <span class="toc-text">Step 2：下载安装Android Studio</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<h2 id="1-为何提倡使用AS而非使用Eclipse开发Android"><a href="#1-为何提倡使用AS而非使用Eclipse开发Android" class="headerlink" title="1.为何提倡使用AS而非使用Eclipse开发Android"></a>1.为何提倡使用AS而非使用Eclipse开发Android</h2><p>答：</p>
+<blockquote>
+<ul>
+<li>因为Google在2015年已经停止了Eclipse开发Android的支持，不再做相<br>关的更新！官网已经不再提供下载链接了(当然有隐藏链接~)；</li>
+<li>Android Studio是Google亲儿子；</li>
+<li>基于IntelliJ IDEA，功能强大代码编辑器；</li>
+<li>基于Gradle构建系统等等…<br>总之就是牛逼哄哄，如果你用熟了AS就不会想着回头摸Eclipse~</li>
+</ul>
+</blockquote>
+<p>附：旧版Eclipse下载的隐藏链接</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">系统</th>
+<th style="text-align:center">位数</th>
+<th style="text-align:center">下载文件地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Window</td>
+<td style="text-align:center">32位</td>
+<td style="text-align:center"><a href="https://dl.google.com/android/adt/adt-bundle-windows-x86-20140702.zip" target="_blank" rel="external">https://dl.google.com/android/adt/adt-bundle-windows-x86-20140702.zip</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Window</td>
+<td style="text-align:center">64位</td>
+<td style="text-align:center"><a href="https://dl.google.com/android/adt/adt-bundle-windows-x86_64-20140702.zip" target="_blank" rel="external">https://dl.google.com/android/adt/adt-bundle-windows-x86_64-20140702.zip</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Linux</td>
+<td style="text-align:center">32位</td>
+<td style="text-align:center"><a href="https://dl.google.com/android/adt/adt-bundle-linux-x86-20140702.zip" target="_blank" rel="external">https://dl.google.com/android/adt/adt-bundle-linux-x86-20140702.zip</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Linux</td>
+<td style="text-align:center">64位</td>
+<td style="text-align:center"><a href="https://dl.google.com/android/adt/adt-bundle-linux-x86_64-20140702.zip" target="_blank" rel="external">https://dl.google.com/android/adt/adt-bundle-linux-x86_64-20140702.zip</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-AS有哪些优缺点？"><a href="#2-AS有哪些优缺点？" class="headerlink" title="2.AS有哪些优缺点？"></a>2.AS有哪些优缺点？</h2><p><strong>优点</strong>：</p>
+<blockquote>
+<ul>
+<li>1.Google亲儿子，官方Android IDE，出问题Google会修复，不断更新；</li>
+<li>2.AS基于牛叉的Java IDE：<strong>IntelliJ IDEA</strong>，更强大的代码智能提醒，界面更好看，<br>丰富的插件下载：一键findViewById，代码画词翻译等等，实属开发利器；</li>
+<li>3.智能重构，智能的代码检测，更丰富的代码搜索功能；</li>
+<li>4.图片可以直接转.9，并且可以直接编辑.9；</li>
+<li>5.代码定时自动保存，无需一直ctrl + s；</li>
+<li>6.强大的Gradle脚本构建工程：一行代码引用开源库，AAR；多渠道打包等等；</li>
+<li>7.强大的即时运行，不用每次都重新编译运行，直接能看到效果；</li>
+<li>8.内置性能监测工具，可以事实查看内存，CPU，网络，GPU的情况；<br>还有其他很多好的地方，自己慢慢发掘~</li>
+</ul>
+</blockquote>
+<p><strong>缺点</strong>：</p>
+<blockquote>
+<p>用了这么久我觉得AS是非常好用，可能刚接触AS的童鞋会觉得AS有以下几点不好的：</p>
+<ul>
+<li>1.一个窗口只能打开一个工程，Eclipse可以在一个窗口同时打开多个工程；</li>
+<li>2.每次Gradle编译运行的时候很卡，要等很久；<br>卡顿的主要原因是：频繁的IO读写，Gradle默认编译的时候会去查询下载更新库，<br>然后天朝你懂的，所以很多时候都会很慢；<br>解决的方向有：<br>①<strong>升级自己电脑的配置</strong>，SSD固态硬盘是必须得有，120G的也就几百块，普通应用<br>开发够用了；然后内存上8G，内存多点没什么坏处；<br>②<strong>设置Gradle离线编译模式</strong>，依次打开：<br>Setting -&gt; Gradle -&gt; <strong>Use loacl gradle distribution</strong> -&gt; 设置本地gradle路径<br>然后勾选<strong>offline working</strong><br>③<strong>设置编译时分配更多的内存</strong>：到电脑根目录下：<img src="http://static.zybuluo.com/coder-pig/jde0jbu0z61iav0rap2a2gqd/image_1asj7jsjp1f711v0uq8nic14vs9.png" alt="">，打开<strong>gradle.properties</strong>，修改<br>分配内存为2048mb，这里贴下，有需要的自己复制就好；<br>④项目尽可能模块化；公司搭建本地maven仓库，内网下载比外网快；简化Gradle脚本；</li>
+</ul>
+</blockquote>
+<p><strong>gradle.properties</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">org.gradle.daemon=true</span><br><span class="line">org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8 </span><br><span class="line">org.gradle.parallel=true</span><br><span class="line">org.gradle.configureondemand=true</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="3-下载安装Android-Studio"><a href="#3-下载安装Android-Studio" class="headerlink" title="3.下载安装Android Studio"></a>3.下载安装Android Studio</h2><h3 id="Step-1：安装JDK：先装JDK，不然你装好AS也是打不开的"><a href="#Step-1：安装JDK：先装JDK，不然你装好AS也是打不开的" class="headerlink" title="Step 1：安装JDK：先装JDK，不然你装好AS也是打不开的"></a>Step 1：安装JDK：先装JDK，不然你装好AS也是打不开的</h3><hr>
+<p><strong>Window版本</strong></p>
+<p>官网下载地址：<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a><br>安装：一直按下一步就好，默认安装在<strong>Program Files\Java</strong>目录下<br><strong>配置Java环境变量</strong>：</p>
+<p><strong>新建</strong>：<strong>JAVA_HOME</strong>：jdk的安装路径，比如：C:\Program Files\Java\jdk<br><strong>修改</strong>：<strong>PATH</strong>，光标移到最前面(Home键)，添加：<strong>%JAVA_HOME%\bin;</strong>！！！别删其他东西！！<br><strong>新建</strong>：<strong>CLASSPATH</strong>，添加：<strong>%JAVA_HOME%\lib\tools.jar;</strong><br>后面两个变量配置<strong>别漏掉”;”</strong>分号哦！ </p>
+<p><strong>验证</strong>：打开命令行(cmd)，依次键入：java和javac，出现一堆东西而不是：<br>“<strong>java或者javac不是内部或者外部命令</strong>“，就说明环境变量配置成功。</p>
+<hr>
+<p><strong>Ubuntu版本</strong>(基于14.04 LTS)：</p>
+<p><strong>方法一</strong>：直接打开Terminal(终端)，依次键入下述三个命令即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-add-repository ppa:webupd8team/java</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install oracle-java8-set-default</span><br></pre></td></tr></table></figure>
+<p>这样安装会自动设置好环境变量，可能你想安装的是其他版本的jdk，比如jdk 7的，<br>只需把java8改成java7即可，另外还有一点，你可以下载多个jdk，而你不想新下载<br>jdk会覆盖你之前的环境变量，可以把安装语句改成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install oracle-java7-installer</span><br></pre></td></tr></table></figure>
+<p>默认安装到<strong>/usr/lib/jvm/</strong>目录下！</p>
+<p><strong>方法二</strong>：自己下载jdk压缩包，手动配环境变量</p>
+<p>当然，你也可以自己下jdk压缩包，解压后自己手动配Java环境变量，打开Terminal，<br>键入:<strong>sudo gedit ~/.bashrc</strong> 然后添加环境变量的配置代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xport JAVA_HOME=/usr/lib/jvm/jdk1.7.0_55   </span><br><span class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre  </span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib  </span><br><span class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure>
+<p>保存Terminal键入java，javac看是否生效。</p>
+<p>附：<strong>Android系统源码编译时设置局部环境变量</strong></p>
+<p>如题，假如我们开发普通应用是基于jdk 1.8的，而编译源码需要的环境是jdk 1.6或者jdk 1.7<br>的，那么我们可以在创建一个设置临时Java环境变量的文件，然后让在当前Terminal中jdk的版<br>本变成1.6或者1.7，比如我在源码目录下创建一个jdk.sh的文件，然后写入下述内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export J2SDKDIR=/usr/lib/jvm/java-7-openjdk-amd64</span><br><span class="line">export J2REDIR=/usr/lib/jvm/java-7-openjdk-amd64/jre</span><br><span class="line">export PATH=/usr/lib/jvm/java-7-openjdk-amd64/bin:/usr/lib/jvm/java-7-openjdk-amd64/db/bin:/usr/lib/jvm/java-7-openjdk-amd64/jre/bin:$PATH</span><br><span class="line">export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64</span><br><span class="line">export DERBY_HOME=/usr/lib/jvm/java-7-openjdk-amd64/db</span><br></pre></td></tr></table></figure>
+<p>保存，然后在编译源码之前，我只需要键入: <strong>. jdk.sh</strong> 即可让局部环境变量生效，<br>那么在这个Terminal里，jdk的版本就变成了1.7了，然后就可以进行源码编译的后续操作了。</p>
+<hr>
+<h3 id="Step-2：下载安装Android-Studio"><a href="#Step-2：下载安装Android-Studio" class="headerlink" title="Step 2：下载安装Android Studio"></a>Step 2：下载安装Android Studio</h3><p><strong>官网地址</strong>(需要梯子，有些慢)：<a href="https://developer.android.com/studio/index.html" target="_blank" rel="external">https://developer.android.com/studio/index.html </a><br><strong>AndroidDevTools</strong>(国内站点，资源在百度云)：<a href="http://www.androiddevtools.cn/" target="_blank" rel="external">http://www.androiddevtools.cn/</a></p>
+<hr>
+<p><strong>windows版本</strong>：</p>
+<p><strong>安装</strong>：安装路径那里可以自己选下AS和sdk的路径，也可以不选，其他默认下一步，虚的<br>自己谷歌百度下。</p>
+<p><strong>配置环境变量</strong>：</p>
+<p><strong>新建</strong>：<strong>ANDROID_HOME</strong>：SDK的路径，不如我的：D:\Software\Coding\android-sdk<br><strong>修改</strong>：<strong>PATH</strong>：添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%ANDROID_HOME%;%ANDROID_HOME%\tools;%ANDROID_HOME%\build-tools;%ANDROID_HOME%\platform-tools;</span><br></pre></td></tr></table></figure>
+<p><strong>验证</strong>：打开命令行(cmd)，键入：adb，出现一堆东西而不是：<br>“<strong>adb不是内部或者外部命令</strong>“，说明环境变量配置成功。</p>
+<hr>
+<p><strong>Ubuntu版本</strong>：</p>
+<p><strong>方法一：下载解压(建议)</strong></p>
+<p>解压后，打开Terminal，cd到解压目录的bin目录下，键入： <strong>./studio.sh</strong><br>即可运行Android Studio，接着各种选择，安装，安装完后续打开AS重复这个<br>步骤即可!</p>
+<p><strong>方法二：键入命令，一键安装</strong></p>
+<p>打开Terminal，依次键入下述命令，不是很简易，因为网络问题可能会失败多次</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-add-repository ppa:paolorotolo/android-studio</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install android-studio</span><br><span class="line">sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1</span><br></pre></td></tr></table></figure>
+<p><strong>附</strong>：<strong>Android Studio安装时报错:unable to run mksdcard sdk tool的解决方法</strong></p>
+<p>键入下述命令添加以来，然后重新安装即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6</span><br></pre></td></tr></table></figure>
+<p><strong>附：设置Android Studio快捷启动方式</strong></p>
+<p>每次运行AS都需要敲一波命令显得有些繁琐，我们按照下述操作来设置快捷启动方式<br>打开Terminal，键入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /usr/share/applications/Studio.desktop</span><br></pre></td></tr></table></figure>
+<p>接着设置与Android Studio相关的东西：<strong>Exec</strong>代表运作脚本，<strong>Icon</strong>表示图标<br><strong>Terminal</strong>：是否显示shell</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Name = Studio</span><br><span class="line">comment= android studio</span><br><span class="line">Exec=/opt/android-studio/bin/studio.sh</span><br><span class="line">Icon=/opt/android-studio/bin/studio.png</span><br><span class="line">Terminal=false</span><br><span class="line">Type=Application</span><br></pre></td></tr></table></figure>
+<p>保存退出后，来到usr/share/applications目录下，找到Studio图标，拖到左边<br>任务栏即可。</p>
+<p><strong>附：Android环境变量的配置：</strong></p>
+<p>打开Terminal，键入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/profile</span><br></pre></td></tr></table></figure>
+<p>复制粘贴，然后把下面的ANDROID_HOME的路径改成你Android Studio的实际路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export ANDROID_HOME=&quot;$HOME/Library/Android/sdk&quot;</span><br><span class="line">export PATH=$PATH:$ANDROID_HOME/platform-tools</span><br><span class="line">export PATH=$PATH:$ANDROID_HOME/tools</span><br></pre></td></tr></table></figure>
+<p>修改后保存，wq，接着键入下述指令，可以让环境变量在当前的shell有效：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+<p>接着你可以键入:adb，看看是不是出来一大串的东西，来验证环境变量配置是否<br>生效，接着重启电脑，接着在其他的shell也会生效了！</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/AndroidStudio-Eat-Guide/">AndroidStudio-Eat-Guide</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/AndroidStudio-Eat-Guide/">AndroidStudio-Eat-Guide</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2016/09/14/AndroidStudio-Eat-Guide—— 1.AS简介，下载安装与配置/" data-title="AndroidStudio-Eat-Guide—— 1.AS简介，下载安装与配置 | CoderPig的小世界" data-tsina="3263534374" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/09/05/Android-Resources-Hodgepodge(Android资源大杂烩)/"  title="ndroid-Resources-Hodgepodge(Android资源大杂烩)">
+ <strong>下一篇：</strong><br/> 
+ <span>ndroid-Resources-Hodgepodge(Android资源大杂烩)
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/09/14/AndroidStudio-Eat-Guide—— 1.AS简介，下载安装与配置/" data-title="AndroidStudio-Eat-Guide—— 1.AS简介，下载安装与配置" data-url="http://yoursite.com/2016/09/14/AndroidStudio-Eat-Guide—— 1.AS简介，下载安装与配置/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-为何提倡使用AS而非使用Eclipse开发Android"><span class="toc-number">1.</span> <span class="toc-text">1.为何提倡使用AS而非使用Eclipse开发Android</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-AS有哪些优缺点？"><span class="toc-number">2.</span> <span class="toc-text">2.AS有哪些优缺点？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-下载安装Android-Studio"><span class="toc-number">3.</span> <span class="toc-text">3.下载安装Android Studio</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-1：安装JDK：先装JDK，不然你装好AS也是打不开的"><span class="toc-number">3.1.</span> <span class="toc-text">Step 1：安装JDK：先装JDK，不然你装好AS也是打不开的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-2：下载安装Android-Studio"><span class="toc-number">3.2.</span> <span class="toc-text">Step 2：下载安装Android Studio</span></a></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/AndroidStudio-Eat-Guide/" title="AndroidStudio-Eat-Guide">AndroidStudio-Eat-Guide<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/StorageBox/" title="StorageBox">StorageBox<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/StorageBox/" title="StorageBox">StorageBox<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/AndroidStudio-Eat-Guide/" title="AndroidStudio-Eat-Guide">AndroidStudio-Eat-Guide<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://blog.csdn.net/coder_pig" target="_blank" title="CoderPig的猪栏">CoderPig的猪栏</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://anany.me/" target="_blank" title="Anany&#39;s blog">Anany&#39;s blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3263534374&verifier=90e33b2c&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello! I&#39;m CoderPig , a little Android developer. <br/>
+			This is my blog ,mark about my study and life.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/3263534374" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/https://github.com/coder-pig" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="http://www.zhihu.com/people/zhuang-pei-jie" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:779878443@qq.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="Coder-pig">Coder-pig</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"coder-pig"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?2a3c1a8464eb7c18c8470f7d78950692";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
