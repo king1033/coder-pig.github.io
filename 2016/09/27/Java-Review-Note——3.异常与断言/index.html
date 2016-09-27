@@ -1,0 +1,719 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Java-Review-Note —— 3.异常与断言 | CoderPig的小世界</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Coder-pig">
+    
+
+    
+    <meta name="description" content="异常什么是异常：
+
+程序运行过程中出现的不正常现象，比如：除法运算，除以0，这个就是算术异常；记住一点：异常是运行时的程序出错，编译时检查的只是语法错误，不运行何来的异常？
+
+为什么会出现异常：
+
+程序运行过程中由于各种因素导致程序运行发生错误，比如：用户误操作，代码本身错误，系统环境因素等；在处理异常时需要对异常进行判断，针对不同的异常类型采取不同的处理措施。
+
+异常的分类：
+
+常见异常信息总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java-Review-Note —— 3.异常与断言">
+<meta property="og:url" content="http://yoursite.com/2016/09/27/Java-Review-Note——3.异常与断言/index.html">
+<meta property="og:site_name" content="CoderPig的小世界">
+<meta property="og:description" content="异常什么是异常：
+
+程序运行过程中出现的不正常现象，比如：除法运算，除以0，这个就是算术异常；记住一点：异常是运行时的程序出错，编译时检查的只是语法错误，不运行何来的异常？
+
+为什么会出现异常：
+
+程序运行过程中由于各种因素导致程序运行发生错误，比如：用户误操作，代码本身错误，系统环境因素等；在处理异常时需要对异常进行判断，针对不同的异常类型采取不同的处理措施。
+
+异常的分类：
+
+常见异常信息总结">
+<meta property="og:image" content="http://static.zybuluo.com/coder-pig/33yf5zb4rczhapiux4o3vljv/7.png">
+<meta property="og:image" content="http://static.zybuluo.com/coder-pig/llpdibhx14hl77sis9one781/image_1atd1ebah1q40e4f19r91d5d7j49.png">
+<meta property="og:updated_time" content="2016-09-27T01:01:10.663Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java-Review-Note —— 3.异常与断言">
+<meta name="twitter:description" content="异常什么是异常：
+
+程序运行过程中出现的不正常现象，比如：除法运算，除以0，这个就是算术异常；记住一点：异常是运行时的程序出错，编译时检查的只是语法错误，不运行何来的异常？
+
+为什么会出现异常：
+
+程序运行过程中由于各种因素导致程序运行发生错误，比如：用户误操作，代码本身错误，系统环境因素等；在处理异常时需要对异常进行判断，针对不同的异常类型采取不同的处理措施。
+
+异常的分类：
+
+常见异常信息总结">
+<meta name="twitter:image" content="http://static.zybuluo.com/coder-pig/33yf5zb4rczhapiux4o3vljv/7.png">
+
+    
+    <link rel="alternative" href="/atom.xml" title="CoderPig的小世界" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/mouse_icon.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/mouse_icon.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/mouse_icon.png" alt="CoderPig的小世界" title="CoderPig的小世界"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="CoderPig的小世界">CoderPig的小世界</a></h1>
+				<h2 class="blog-motto">Before finding the right person, the only thing need to do is to make yourself good enough.</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/categories">分类</a></li>
+					
+						<li><a href="/tags">标签</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+						<form class="search" action="http://znsv.baidu.com/customer_search/" target="_blank">
+							<label>Search</label>
+						<input name="s" type="hidden" value= 10969979416646924000 ><input type="text" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/09/27/Java-Review-Note——3.异常与断言/" title="Java-Review-Note —— 3.异常与断言" itemprop="url">Java-Review-Note —— 3.异常与断言</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Coder-pig" target="_blank" itemprop="author">Coder-pig</a>
+		
+  <p class="article-time">
+    <time datetime="2016-09-27T00:59:03.264Z" itemprop="datePublished"> 发表于 2016-09-27</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#异常"><span class="toc-number">1.</span> <span class="toc-text">异常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#断言"><span class="toc-number">2.</span> <span class="toc-text">断言</span></a></li></ol>
+		
+		</div>
+		
+		<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p><strong>什么是异常</strong>：</p>
+<blockquote>
+<p>程序运行过程中出现的不正常现象，比如：除法运算，除以0，这个就是算术异常；<br><strong>记住一点</strong>：<strong>异常是运行时的程序出错</strong>，<strong>编译时检查的只是语法错误</strong>，不运行何来的异常？</p>
+</blockquote>
+<p><strong>为什么会出现异常</strong>：</p>
+<blockquote>
+<p>程序运行过程中由于各种因素导致程序运行发生错误，比如：用户误操作，代码本身错误，系统环境<br>因素等；在处理异常时需要对异常进行判断，针对不同的异常类型采取不同的处理措施。</p>
+</blockquote>
+<p><strong>异常的分类</strong>：</p>
+<p><img src="http://static.zybuluo.com/coder-pig/33yf5zb4rczhapiux4o3vljv/7.png" alt=""></p>
+<p><strong>常见异常信息总结表</strong>：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">异常类型</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>ArithmeticException</strong></td>
+<td style="text-align:left">算术异常</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ArrayIndexOutOfBoundsException</strong></td>
+<td style="text-align:left">数组下标越界异常</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ArrayStoreException</strong></td>
+<td style="text-align:left">数组元素类型不兼容eg:为整型数组赋浮点型的数</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ClassCastException</strong></td>
+<td style="text-align:left">类型强制转换异常(精度丢失)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ClassNotFoundException</strong></td>
+<td style="text-align:left">找不到对应类异常</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>CloneNotSupportedException</strong></td>
+<td style="text-align:left">调用clone()方法,但没有实现Cloneable接口(ps:数组默认实现该接口)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>EOFException</strong></td>
+<td style="text-align:left">文件已结束异常</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>FileNotFoundException</strong></td>
+<td style="text-align:left">找不到对应文件异常</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>IllegalAccessException</strong></td>
+<td style="text-align:left">否问某个类被拒绝时的异常(eg:在别的类中访问private修饰的类)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>IndexOutOfBoundsException</strong></td>
+<td style="text-align:left">下标索引越界异常(eg:数组int a[5],访问a[5]);就会触发该异常,因为下标从0开始</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>InstantiationException</strong></td>
+<td style="text-align:left">使用newInstance()方法创建抽象类或借口实例抛出的异常</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>IOException</strong></td>
+<td style="text-align:left">输入输出异常</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>NullPointerException</strong></td>
+<td style="text-align:left">空指针异常,这个是比较常见的,eg:对象没有实例化直接调用属性或者方法</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>NumberFormatException</strong></td>
+<td style="text-align:left">数字格式转换异常,eg:”1+2”这个是字符串,转化为数字就报错了</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>NoSuchFieldException</strong></td>
+<td style="text-align:left">字段未找到异常</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>NoSuchMethodException</strong></td>
+<td style="text-align:left">方法为找到异常</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>NoSuchElementException</strong></td>
+<td style="text-align:left">元素未找到异常(eg:调用StringTokenizer的nextToken()方法可以出现)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>SecurityException</strong></td>
+<td style="text-align:left">安全异常问题,可能需要修改权限</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>SQLException</strong></td>
+<td style="text-align:left">数据库操作异常</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>StringIndexOutOfBoundsException</strong></td>
+<td style="text-align:left">字符串索引越界异常</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>MalformedURLException</strong></td>
+<td style="text-align:left">URL配置异常(可能是URL协议,格式,或者路径错误;jar包问题,去掉gnujaxp.jar包引用即可)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>UnknowHostException</strong></td>
+<td style="text-align:left">域名解析出错异常</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>IllegArgumentException</strong></td>
+<td style="text-align:left">向方法传递了一个不合法或者不合理的参数</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>IllegalStateException</strong></td>
+<td style="text-align:left">违法的状态异常,调用了某个不处于合法调用状态的方法(eg:调用已经销毁的方法)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>检验异常与非检验异常</strong>：</p>
+<blockquote>
+<ul>
+<li><strong>Error类</strong>：表示一个程序错误，指的是底层的，低级的，不可以恢复的严重错误；<br>此时的程序一定会退出，因为已经失去了程序运行所需的物理环境，我们无法进行处理。</li>
+<li><strong>Exception类</strong>：分为检验异常和非检验异常</li>
+</ul>
+<p><strong>RuntimeException及其子类都是非检验异常</strong>，其他的异常均为检验异常,需要进行捕获</p>
+<ul>
+<li><strong>检验异常</strong>：程序代码中需要进行捕获的异常,(try-catch或者throws + try - catch)</li>
+<li><strong>非检验异常</strong>:因为没有进行必要的检查，由于疏忽或错误引起的异常，一定属于虚拟机内部异常<br>(eg:空指针异常)</li>
+</ul>
+</blockquote>
+<p><strong>异常的处理</strong>：</p>
+<p><strong>1.异常的捕获</strong></p>
+<p><strong>try-catch块</strong>：catch块必须与try块一起使用，不能单独使用；例子：数组越界异常</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Test &#123;</span><br><span class="line">	public static void main (String[] args) &#123;</span><br><span class="line">		int arr[] = &#123;1,2,3&#125;;</span><br><span class="line">        try &#123; System.out.println(arr[4]+&quot;&quot;); </span><br><span class="line">        &#125; catch(ArrayIndexOutOfBoundsException e)  &#123; System.out.println(&quot;数组越界了！&quot;); &#125;  </span><br><span class="line">        System.out.println(&quot;呵呵&quot;);  </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>运行结果</strong>：数组越界了 呵呵<br>如果没加try-catch的话，数组越界的时候程序会直接终止，不会打印出呵呵。<br>而加了try-catch，如果发生了异常，那么就会执行catch里面的方法。</p>
+<p><strong>finally块</strong>：同样需与try块一起使用，无论什么情况，finally块中的内容一定会执行，<br>我们一般在finally块中执行系统资源清理和释放的工作，比如文件，数据库关闭等。<br><strong>有一点要注意</strong>：如果在catch块中调用了System.exit(0)；方法，那么finally部分<br>的代码不会被执行,因为程序已经终止了。</p>
+<p><strong>多重catch块</strong>：使用多个catch块，依次捕获不同的异常；<br>其实只有一个catch块被执行，要把子类异常的catch需放在父类异常的catch前面！</p>
+<p><strong>2.异常声明</strong></p>
+<blockquote>
+<p><strong>throws回避异常</strong>：当一个方法可能会引发某种异常时，但是我们又不想在该方法中<br>对该异常进行处理；可以用throws将异常抛出，当我们调用该方法时再对异常进行捕获。</p>
+</blockquote>
+<p><strong>3.异常抛出</strong></p>
+<blockquote>
+<p><strong>throw显式引发异常</strong>：一般用于程序调试或者抛出用户自定义异常。</p>
+</blockquote>
+<p><strong>自定义异常</strong>：</p>
+<blockquote>
+<p>系统提供的异常类不一定能捕获所有的错误异常，在这种情况下，我们 可以根据<br>自己的需要，自定义异常类型，需注意以下三点：</p>
+<ul>
+<li>1.需继承Exception类</li>
+<li>2.需要使用throw抛出自定义异常</li>
+<li>3.需要使用try-catch对异常进行捕获</li>
+</ul>
+</blockquote>
+<p><strong>示例代码</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class MyException extend Excetpion &#123;</span><br><span class="line">    public MyException() &#123; super(&quot;自定义异常：出书不符合规定&quot;); &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class ExceptionTest &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int a = 2;</span><br><span class="line">        int b = 1;</span><br><span class="line">        //如果满足条件就throw异常，同时用try-catch进行捕获</span><br><span class="line">        if(b == 0 || b == 1) &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                throw new MyException();</span><br><span class="line">            &#125; catch(MyException e) &#123;System.out.println(e.getMessage();)&#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h2><p><strong>什么是断言：</strong></p>
+<blockquote>
+<p>jdk 1.4后引入的Assert(断言)，允许在代码中代码中添加一些合法的语句以用于<br>调试程序；在assert制定的布尔表达式条件不成立时会抛出一个AssertionError<br>对象，直接终止程序的运行。</p>
+</blockquote>
+<p><strong>使用断言的好处：</strong></p>
+<blockquote>
+<p>一种错误处理机制，在程序开发与测试阶段使用；<br>可以理解为代替if-else或try-catch，这些东西对程序性能是有一定影响的，<br>完成调试后你还要一个个把他删除掉，如果用断言，则是最低代价。<br>另外：①断言失败是致命,不可恢复的，②断言检查仅仅用于程序开发测试阶段</p>
+</blockquote>
+<p><strong>断言的使用：</strong>：</p>
+<blockquote>
+<p><strong>assert 条件</strong> 或 <strong>assert 条件:错误信息</strong><br>第二种方式，如果前面的条件不成立的话，那么后面的字符串作为AssertionError错误输出信息</p>
+</blockquote>
+<p><strong>断言的开启：</strong>默认情况下断言是关闭的,要通过<strong>enableassertions</strong>或<strong>-ea</strong>来启用断言功能;</p>
+<p><strong>断言的关闭</strong>：使用<strong>disableassertions</strong>或<strong>-da</strong>来关闭断言功能</p>
+<p> 代码示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AssertDemo</span> </span>&#123;  </span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> num)</span>  </span><br><span class="line">    </span>&#123;  </span><br><span class="line">        <span class="comment">//如果num &lt;= 0的话,抛出AssertError,显示错误信息  </span></span><br><span class="line">        <span class="keyword">assert</span>(num &gt;=<span class="number">0</span>):<span class="string">"传入参数需要大于0"</span>;  </span><br><span class="line">        System.out.println(<span class="string">"参数为正数！"</span>);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;  </span><br><span class="line">        test(-<span class="number">7</span>);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行截图：</p>
+<p><img src="http://static.zybuluo.com/coder-pig/llpdibhx14hl77sis9one781/image_1atd1ebah1q40e4f19r91d5d7j49.png" alt=""></p>
+<hr>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Java-Review-Note/">Java-Review-Note</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Java-Review-Note/">Java-Review-Note</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2016/09/27/Java-Review-Note——3.异常与断言/" data-title="Java-Review-Note —— 3.异常与断言 | CoderPig的小世界" data-tsina="3263534374" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/09/27/Java-Review-Note——2.面向对象/" title="Java-Review-Note—— 2.面向对象">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Java-Review-Note—— 2.面向对象</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/09/20/Android-Skillful-Craftsman(Android能工巧匠)/"  title="Android-Skillful-Craftsman(Android能工巧匠)">
+ <strong>下一篇：</strong><br/> 
+ <span>Android-Skillful-Craftsman(Android能工巧匠)
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/09/27/Java-Review-Note——3.异常与断言/" data-title="Java-Review-Note —— 3.异常与断言" data-url="http://yoursite.com/2016/09/27/Java-Review-Note——3.异常与断言/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#异常"><span class="toc-number">1.</span> <span class="toc-text">异常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#断言"><span class="toc-number">2.</span> <span class="toc-text">断言</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/AndroidStudio-Eat-Guide/" title="AndroidStudio-Eat-Guide">AndroidStudio-Eat-Guide<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Java-Review-Note/" title="Java-Review-Note">Java-Review-Note<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/StorageBox/" title="StorageBox">StorageBox<sup>2</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/AndroidStudio-Eat-Guide/" title="AndroidStudio-Eat-Guide">AndroidStudio-Eat-Guide<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java-Review-Note/" title="Java-Review-Note">Java-Review-Note<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/StorageBox/" title="StorageBox">StorageBox<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://blog.csdn.net/coder_pig" target="_blank" title="CoderPig的猪栏">CoderPig的猪栏</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://anany.me/" target="_blank" title="Anany&#39;s blog">Anany&#39;s blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3263534374&verifier=90e33b2c&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello! I&#39;m CoderPig , a little Android developer. <br/>
+			This is my blog ,mark about my study and life.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/3263534374" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/https://github.com/coder-pig" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="http://www.zhihu.com/people/zhuang-pei-jie" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:779878443@qq.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="Coder-pig">Coder-pig</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"coder-pig"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?2a3c1a8464eb7c18c8470f7d78950692";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
